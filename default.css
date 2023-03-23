@@ -3,7 +3,23 @@ body{
 }
 
 p{
-    font-family: 'Lora', serif;
+    font-family: 'Bona Nova', serif;
     font-size: 18px;
     color: blueviolet
+}
+
+#pic1{
+    position: absolute; top: 75px; left: 450px;
+    background-color: darkgray;
+    padding: 20px;
+    border-style: groove;
+    border-width: 5px;
+    border-color: red;
+}
+
+#bkg{
+    background-color: aqua;
+    position: absolute; top: 5px; left: 5px;
+    height: 750px;
+    width: 950px;
 }
