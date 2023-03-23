@@ -1,4 +1,12 @@
+body{
+    background-color: rgb(255, 250, 183);
+}
+
 p{
     font-family: 'Bona Nova', serif;
+    font-size: 18px;
+}
+
+a{
     font-size: 18px;
 }

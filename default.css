@@ -9,17 +9,21 @@ p{
 }
 
 #pic1{
-    position: absolute; top: 75px; left: 450px;
-    background-color: darkgray;
-    padding: 20px;
-    border-style: groove;
-    border-width: 5px;
-    border-color: red;
+    position: absolute; top: 75px; left: 550px;
+    background-color: rgb(255, 197, 135);
+    padding: 10px;
+    border-style: double;
+    border-width: 10px;
+    border-color: rgb(172, 255, 251);
 }
 
 #bkg{
-    background-color: aqua;
+    background-color: rgb(218, 255, 163);
     position: absolute; top: 5px; left: 5px;
     height: 750px;
     width: 950px;
+}
+
+.button{
+    font-size: 18px;
 }
