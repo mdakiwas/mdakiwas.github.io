@@ -10,3 +10,10 @@ p{
 a{
     font-size: 18px;
 }
+
+#bkg{
+    background-color: rgb(218, 255, 163);
+    position: absolute; top: 5px; left: 5px;
+    height: 750px;
+    width: 950px;
+}
