@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(255, 250, 183);
+    background-color: rgb(255, 255, 255);
 }
 
 p{
@@ -8,12 +8,31 @@ p{
 }
 
 a{
-    font-size: 18px;
+    font-family: 'Bona Nova', serif;
+    font-size: 25px;
+}
+
+h1{
+    font-size: 50px; 
+}
+
+h2{
+    font-size: 30px;
+}
+
+h3{
+    font-size: 20px;
+}
+
+img{
+    max-width: 800px;
+    height: auto;
 }
 
 #bkg{
-    background-color: rgb(218, 255, 163);
-    position: absolute; top: 10px; left: 50px;
-    height: 750px;
-    width: 950px;
+    background-color: rgb(163, 224, 255);
+    position: absolute; top: 25px; left: 225px;
+    height: 950px;
+    width: 1000px;
+    padding: 25px;
 }
