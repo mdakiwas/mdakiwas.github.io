@@ -4,24 +4,24 @@ body{
 
 p{
     font-family: 'Bona Nova', serif;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 a{
     font-family: 'Bona Nova', serif;
-    font-size: 23px;
+    font-size: 25px;
 }
 
 h1{
-    font-size: 50px; 
+    font-size: 60px; 
 }
 
 h2{
-    font-size: 30px;
+    font-size: 35px;
 }
 
 h3{
-    font-size: 23px;
+    font-size: 25px;
 }
 
 img{
@@ -30,23 +30,23 @@ img{
 }
 
 #pic1{
-    width: 1200px;
+    width: 1300px;
     height: auto;
 }
 
 #bkg{
     background-color: rgb(163, 224, 255);
-    position: absolute; top: 25px; left: 225px;
-    height: 1200px;
-    width: 1000px;
+    position: absolute; top: 25px; left: 120px;
+    height: 1250px;
+    width: 1200px;
     padding: 50px;
     border-style: double;
     border-width: 15px;
 }
 
 #imgoverlap{
-    position: absolute; top: 250px; left: 275px;
-    width: 1345px;
+    position: absolute; top: 280px; left: 275px;
+    width: 1380px;
     height: auto;
     padding: 0px;
 }
