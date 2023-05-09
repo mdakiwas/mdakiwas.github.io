@@ -42,7 +42,7 @@ img {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Words-Learnt" color="red"></tw-tag><tw-tag name="Confidence" color="orange"></tw-tag><tw-passagedata pid="1" name="Intro" tags="" position="250,25" size="100,100">(set: $words to (a:))(set: $confidence to 0)You are an eight year old child who recently immigrated with your family from the Philippines to the United States. Having just come to the United States, you have very miniscule [[knowledge of the English language|knowledge]]. All you really remember from learning English in the Philippines were &quot;cat, rat, hat...&quot;, plus other words you mom told you were important. Communication hasn&#39;t been an issue as you never really found yourself talking to any English speakers other than your Aunt and Uncle, and talking to them was already anxiety-inducing.
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Words-Learnt" color="red"></tw-tag><tw-tag name="Confidence" color="orange"></tw-tag><tw-passagedata pid="1" name="Intro" tags="" position="250,25" size="100,100">(set: $words to (a:))(set: $confidence to 0)You are an eight year old child who recently immigrated with your family from the Philippines to the United States. Having just come to the United States, you have very miniscule [[knowledge of the English language|knowledge]]. All you really remember from learning English in the Philippines were &quot;cat, rat, hat...&quot;, plus other words your mom told you were important. Communication hasn&#39;t been an issue as you never really found yourself talking to any English speakers other than your Aunt and Uncle, and talking to them was already anxiety-inducing.
 
 Today is the first day you will be attending your new school in the new country. Your mother and father wouldn&#39;t be able to come with you because they have to go to work. With your limited English skills, it&#39;s your responsibility to assist your six year old sister and yourself to get to school and class, and get through the day. 
 
@@ -209,7 +209,7 @@ Through her, you found the importance of other people other than family in your 
 
 As an immigrant, their help was impactful to the little you who felt lost and isolated in a new country.
 
-[[Back|Talk]]</tw-passagedata><tw-passagedata pid="14" name="Help" tags="" position="50,900" size="100,100">(set: $confidence to it + 1)
+[[Back|Talk]]</tw-passagedata><tw-passagedata pid="14" name="Help" tags="" position="75,900" size="100,100">(set: $confidence to it + 1)
 
 (if: $confidence is 2)[You were too nervous to ask an adult, so you tapped a nearby older looking girl to ask instead. &quot;Excuse me...?&quot;
 
@@ -222,6 +222,8 @@ You weren&#39;t sure if she was annoyed by your presence, but nevertheless, she 
 Flustered, you hastily thanked her. A little embarrassed by the interaction, you felt a little awkward.
 
 You grabbed you sister&#39;s hand, and walked to the hallway the girl pointed at. Turning into the hallway, you were faced with another dillemma. The hallway was even more crowded with people, and classes lined both walls. Now, you didn&#39;t know where your classes were.
+(display: &quot;Words Learnt&quot;)
+(display: &quot;Confidence&quot;)
 
 [[Continue|Classes]]]
 (elseif: $confidence &gt; 2)[You decided that it would be better to ask a faculty member. Scanning around, you spotted a Filipino looking lady with a walkie talkie hanging from her pants. Assuming she must be a faculty and slightly drawn in with the sense of familiarity, you walked up to her.
@@ -237,11 +239,12 @@ As if sensing you accent, she gleamed. &quot;You are Filipino?&quot; She spoke i
 Ms. Joy lead you to your class, &quot;This is your class. I&#39;ll make sure your sister get to hers too, don&#39;t worry.&quot; 
 
 Unlike your nervousness for the first day of class in America, your sister was excited. Seeing her fearlessness and being reassured by Ms. Joy, you felt that your sister would be just fine and safe. So, you both waved each other goodbye after promising to meet up where the bus dropped you off.
+(display: &quot;Words Learnt&quot;)
+(display: &quot;Confidence&quot;)
 
 [[Continue|Day]]]
 
-(display: &quot;Words Learnt&quot;)
-(display: &quot;Confidence&quot;)
+
 </tw-passagedata><tw-passagedata pid="15" name="Classes" tags="" position="225,900" size="100,100">&lt;img src=&quot;https://www.schoolsafetysolution.com/wp-content/uploads/2018/11/empty-school-hallway-1080x675.jpg&quot;&gt;
 With your sister in hand, you both wondered around for the longest time. A lady noticed you were lost and inquired, &quot;You ladies know where your classes are?&quot;
 
@@ -277,7 +280,7 @@ But, you loved it.
 The cheer of children playing in the basketball court. The giggle of girls as they&#39;re gossiping in a nearby picnic table. The Philippines&#39; flag waving in the middle of the open air court, where you sang the anthem every morning.
 
 [[America&#39;s School|newschool]]
-[[Back|School]]</tw-passagedata><tw-passagedata pid="19" name="Ms. Joy" tags="" position="275,1025" size="100,100">Ms. Joy were one of the people who helped you integrate into the school. At the first few days, she made sure that you and your sister were able to communicate well with your teachers. 
+[[Back|School]]</tw-passagedata><tw-passagedata pid="19" name="Ms. Joy" tags="" position="275,1025" size="100,100">Ms. Joy was one of the people who helped you integrate into the school. At the first few days, she made sure that you and your sister were able to communicate well with your teachers. 
 
 She gave you more confidence in bringing yourself to talk to new people, despite your fear of their judgement at your lack of English. She provided and linked you and your family to resources for immigrants new to the country. When your parents would come for school events, she was also there to assist y&#39;all.
 
@@ -318,7 +321,9 @@ As soon as your parents came home from work, you cried of how much you miss your
 Your parent reassured you it&#39;ll get better, that you&#39;ll get through this. And, you can only hope you will.]
 
 (display: &quot;Words Learnt&quot;)
-(display: &quot;Confidence&quot;)</tw-passagedata><tw-passagedata pid="23" name="Words Learnt" tags="Words-Learnt" position="550,200" size="100,100">(box: &quot;=XX=&quot;, 2)+(css: &quot;background-color:lightblue;color:black;width:1000px;height:auto&quot;)+(text-size:1)+(b4r:&quot;solid&quot;)+(b4r-color:&quot;lightblue&quot;)+(corner-radius:12)[New Words Learnt: (for: each _word, ...$words) [_word (unless: _word is $words&#39;s last)[,] ]]
+(display: &quot;Confidence&quot;)
+
+[[Play again|Intro]]</tw-passagedata><tw-passagedata pid="23" name="Words Learnt" tags="Words-Learnt" position="550,200" size="100,100">(box: &quot;=XX=&quot;, 2)+(css: &quot;background-color:lightblue;color:black;width:1000px;height:auto&quot;)+(text-size:1)+(b4r:&quot;solid&quot;)+(b4r-color:&quot;lightblue&quot;)+(corner-radius:12)[New Words Learnt: (for: each _word, ...$words) [_word (unless: _word is $words&#39;s last)[,] ]]
 
 </tw-passagedata><tw-passagedata pid="24" name="Confidence" tags="Confidence" position="550,325" size="100,100">(box: &quot;==X==&quot;, 2)+(css: &quot;background-color:lightblue;color:black;width:200px;height:auto&quot;)+(text-size:1)+(b4r:&quot;solid&quot;)+(b4r-color:&quot;lightblue&quot;)+(corner-radius:12)[Confidence: (print: $confidence)]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
