@@ -24,7 +24,7 @@ tw-passage {
   border-style: solid;
   border-color: lightblue;
   padding: 50px;
-  font-size: 150%;
+  font-size: 125%;
   line-height: 150%;
 }
 
@@ -56,8 +56,7 @@ You nervously look over to the group of parents with their kids. Should you ask 
 
 [[Yes, they must be friendly enough to try to help you out.|Yes]]
 
-(display: &quot;Words Learnt&quot;)(display: &quot;Confidence&quot;)</tw-passagedata><tw-passagedata pid="3" name="No" tags="" position="250,275" size="100,100">(set: $confidence to $confidence - 1)
-You decided to not ask them. You weren&#39;t confident enough to try to communicate in English, much less walk up to random strangers. You didn&#39;t feel good about it through, and regretted not doing so. You felt your confidence go down.
+(display: &quot;Words Learnt&quot;)(display: &quot;Confidence&quot;)</tw-passagedata><tw-passagedata pid="3" name="No" tags="" position="250,275" size="100,100">(set: $confidence to $confidence - 1)You decided to not ask them. You weren&#39;t confident enough to try to communicate in English, much less walk up to random strangers. You didn&#39;t feel good about it through, and regretted not doing so. You felt your confidence go down.
 
 You scavenge through your book bag to look for the paper that had your bus number, but came up empty. 
 
@@ -71,19 +70,14 @@ You have to make sure you were on the right bus. Should you ask the bus driver w
 
 (click: ?ask)[(replace: ?body) [If the other children boarded, it must be the right bus. So you decided to not ask.
 
-(display: &quot;Words Learnt&quot;)
-(set: $confidence to $confidence - 1)
-(display: &quot;Confidence&quot;)
+(display: &quot;Words Learnt&quot;)(set: $confidence to $confidence - 1)(display: &quot;Confidence&quot;)
 
 [[Continue|Bus]]]]
 (click: ?dont)[(replace: ?body) [You didn&#39;t wanna risk going to the wrong place, so you decided to ask the bus driver where the bus was heading.
 
-(display: &quot;Words Learnt&quot;)
-(set: $confidence to $confidence + 1)
-(display: &quot;Confidence&quot;)
+(display: &quot;Words Learnt&quot;)(set: $confidence to $confidence + 1)(display: &quot;Confidence&quot;)
 
-[[Continue|Bus]]]]</tw-passagedata><tw-passagedata pid="4" name="Yes" tags="" position="375,275" size="100,100">&lt;img src=&quot;https://www.unitedwaybaycounty.org/wp-content/uploads/2020/03/back-to-school-1024x687.jpg&quot;&gt;
-(set: $confidence to $confidence + 1)You decided to ask them for assistance. You mustered up the courage and walked up to one of the mothers.
+[[Continue|Bus]]]]</tw-passagedata><tw-passagedata pid="4" name="Yes" tags="" position="375,275" size="100,100">&lt;img src=&quot;https://www.unitedwaybaycounty.org/wp-content/uploads/2020/03/back-to-school-1024x687.jpg&quot;&gt;(set: $confidence to $confidence + 1)You decided to ask them for assistance. You mustered up the courage and walked up to one of the mothers.
 
 &quot;Hello...?&quot; 
 
@@ -100,13 +94,9 @@ With a grateful smile and slight bow, you thank her, &quot;Thank you!&quot;
 Now that you know the bus number, your anxiety was lessen. At least you know where you would have to go...for now. But, nevertheless, you also gained more confidence in talking in English. You felt a prouder sense of self.
 
 A bright yellow bus with &quot;116&quot; etched to the side pulled up. You grabbed your sister&#39;s hands and walked up into the bus as soon as the doors opened. 
+(set: $words to it + (a: &quot;need&quot;, &quot;help&quot;))(display: &quot;Words Learnt&quot;)(display: &quot;Confidence&quot;)
 
-(set: $words to it + (a: &quot;need&quot;, &quot;help&quot;))
-(display: &quot;Words Learnt&quot;)
-(display: &quot;Confidence&quot;)
-
-[[Continue|Bus]]</tw-passagedata><tw-passagedata pid="5" name="knowledge" tags="" position="375,150" size="100,100">&lt;img src=&quot;http://vizts.com/wp-content/uploads/2015/10/Manila-skyline.jpg&quot;&gt;
-Your family originally came from the Philippines. Luckily for you, they often speak English there, so it was mandatory to take English classes. 
+[[Continue|Bus]]</tw-passagedata><tw-passagedata pid="5" name="knowledge" tags="" position="375,150" size="100,100">&lt;img src=&quot;http://vizts.com/wp-content/uploads/2015/10/Manila-skyline.jpg&quot;&gt;Your family originally came from the Philippines. Luckily for you, they often speak English there, so it was mandatory to take English classes. 
 
 The highest level course you took in English was your first year of elementary school. So, even though your knowledge in it was limited, you are able to greet and introduce yourself in English albeit unconfidently.
 
@@ -122,29 +112,13 @@ Despite, their limited English, they taught you words and lessons. They taught y
 
 They pushed you to be the better version of yourself.
 
-[[Back|Start]]</tw-passagedata><tw-passagedata pid="7" name="Bus" tags="" position="300,400" size="100,100">&quot;Good morning!&quot; The bus driver tells you. 
-
-(if: $confidence &gt;= 1)[Your earlier interactions gave you more confidence in talking in English. So, despite not being sure about what the bus driver said, you assumed it was a greeting and you responded back with a smile, &quot;Good morning!&quot;
-(set: $words to it + (a:&quot;Good morning&quot;))] 
-(else:)[Your confidence hindered you in responding back to the bus driver. Despite feeling bad that you ignored her, you were too scared to respond back.]
-
-You guided your sister to sit into a empty seat and you sat next to her. The bus was overwhelming, there were loud children bouncing from seat to seat. You wondered how they found the energy to be so lively so early in the morning. (mouseover: &quot;energy&quot;)[This was the very first culture shock you ever experienced.]
-
-Your sister looked unbothered by the noice though. Instead, she seemed excited. In your original language, Tagalog, she began speaking to a kid seating at the seat across hers.
-
-In embarrassment, you told her to stop. &quot;They don&#39;t understand you!&quot; You told her in [[Tagalog]]. Your sister sulked in disappointment and quited down. Guilty, you tried to distract her from the isolation by talking to her instead.
-
-(display: &quot;Words Learnt&quot;)
-(display: &quot;Confidence&quot;)
-
-[[Continue|Girl]]</tw-passagedata><tw-passagedata pid="8" name="Tagalog" tags="" position="175,525" size="100,100">At home, your family had originally predominately spoke in Tagolog. Over time, your parents began to talk in a mixture of Tagalog and English, and your sister almost always spoke in English.
+[[Back|Start]]</tw-passagedata><tw-passagedata pid="7" name="Tagalog" tags="" position="175,525" size="100,100">At home, your family had originally predominately spoke in Tagolog. Over time, your parents began to talk in a mixture of Tagalog and English, and your sister almost always spoke in English.
 
 A sense of separation to your mother tongue began to develop as years flew by.
 
 (mouseover: &quot;by&quot;)[And along with time also came a sense of appreciation for your heritage.]
 
-[[Back|Bus]]</tw-passagedata><tw-passagedata pid="9" name="Girl" tags="" position="300,525" size="100,100">&lt;img src=&quot;https://img.freepik.com/free-photo/long-haired-student-with-smile_1149-175.jpg?w=996&amp;t=st=1683632001~exp=1683632601~hmac=02f9b5711576bea02342a34659f1365872c7e2708716f2ea2ed51ca1ae622a83&quot;&gt;
-While talking to your sister in Tagalog, a girl peered over from the seat in front of you. &quot;What are you guys saying?!&quot; The little girl&#39;s enthusiastically asked you.
+[[Back|Bus]]</tw-passagedata><tw-passagedata pid="8" name="Girl" tags="" position="300,525" size="100,100">&lt;img src=&quot;https://img.freepik.com/free-photo/long-haired-student-with-smile_1149-175.jpg?w=996&amp;t=st=1683632001~exp=1683632601~hmac=02f9b5711576bea02342a34659f1365872c7e2708716f2ea2ed51ca1ae622a83&quot;&gt;While talking to your sister in Tagalog, a girl peered over from the seat in front of you. &quot;What are you guys saying?!&quot; The little girl&#39;s enthusiastically asked you.
 
 The interaction was so unexpected, but your sister was excited at meeting the new person. 
 
@@ -154,8 +128,7 @@ What should you do?
 
 [[Pretend that you didn&#39;t hear the girl and continue talking to your sister.|Ignore]]
 
-(display: &quot;Words Learnt&quot;)
-(display: &quot;Confidence&quot;)</tw-passagedata><tw-passagedata pid="10" name="Talk" tags="" position="250,650" size="100,100">(set: $confidence to it + 1) You struggled to say that you didn&#39;t know much English. The little girl noticed this, &quot;Oh, my parents is from El Salvador. So, they also don&#39;t know English that good.
+(display: &quot;Words Learnt&quot;)(display: &quot;Confidence&quot;)</tw-passagedata><tw-passagedata pid="9" name="Talk" tags="" position="250,650" size="100,100">(set: $confidence to it + 1) You struggled to say that you didn&#39;t know much English. The little girl noticed this, &quot;Oh, my parents is from El Salvador. So, they also don&#39;t know English that good.
 
 So, I get it!&quot; She paused and stared at both you and your sister back and forth. &quot;You know what?! I&#39;ll help you! I&#39;ve help my parents translate before!
 
@@ -165,21 +138,16 @@ I&#39;m [[Genesis]]!&quot;
 A wave of happiness washed over you, and her energy infected you. (set: $confidence to it + 1) You introduced yourself and your sister. Your sister understood that you were conversing with Genesis, and as if the flood gates opened, she began to talk in Tagalog and the little English she knew with Genesis. Genesis, despite not knowing what she was saying, pretended she did.
 
 You laughed at your sister and Genesis&#39; interaction, and helped translate your sister as best as you could.
-(set: $words to it + (a: &quot;translate&quot;, &quot;friends&quot;, &quot;fun&quot;))
-(display: &quot;Words Learnt&quot;)
-(display: &quot;Confidence&quot;)
+(set: $words to it + (a: &quot;translate&quot;, &quot;friends&quot;, &quot;fun&quot;))(display: &quot;Words Learnt&quot;)(display: &quot;Confidence&quot;)
 
-[[Continue|School]]</tw-passagedata><tw-passagedata pid="11" name="Ignore" tags="" position="375,650" size="100,100">&lt;img src=&quot;https://i.pinimg.com/originals/d2/e4/13/d2e413602ea07e4181a484c027a52ecb.png&quot;&gt;
-(set: $confidence to it - 1)
+[[Continue|School]]</tw-passagedata><tw-passagedata pid="10" name="Ignore" tags="" position="375,650" size="100,100">&lt;img src=&quot;https://i.pinimg.com/originals/d2/e4/13/d2e413602ea07e4181a484c027a52ecb.png&quot;&gt;(set: $confidence to it - 1)
 You pretended that you didn&#39;t hear the girl. In awkwardness, the girl turned back around. Your sister looked at you in sadness and opted to stop talking all together.
 
 Within the rowdiness of the bus, you and your sister sat there in silence. 
 
-(display: &quot;Words Learnt&quot;)
-(display: &quot;Confidence&quot;)
+(display: &quot;Words Learnt&quot;)(display: &quot;Confidence&quot;)
 
-[[Continue|School]]</tw-passagedata><tw-passagedata pid="12" name="School" tags="" position="325,775" size="100,100">&lt;img src=&quot;https://img.freepik.com/free-photo/schoolkids-with-bright-backpacks-walking-through-school-hallway-holding-hands-teachers_74855-16436.jpg?w=360&amp;t=st=1683631369~exp=1683631969~hmac=aec4d6211cbebdf6a97ec6d82c8e99df8a64ebf56200e967122f3abfd7114a05&quot;&gt;
-You got off the bus. Clueless of what to do next, you followed the crowd into the school.
+[[Continue|School]]</tw-passagedata><tw-passagedata pid="11" name="School" tags="" position="325,775" size="100,100">&lt;img src=&quot;https://img.freepik.com/free-photo/schoolkids-with-bright-backpacks-walking-through-school-hallway-holding-hands-teachers_74855-16436.jpg?w=360&amp;t=st=1683631369~exp=1683631969~hmac=aec4d6211cbebdf6a97ec6d82c8e99df8a64ebf56200e967122f3abfd7114a05&quot;&gt;You got off the bus. Clueless of what to do next, you followed the crowd into the school.
 
 The [[school|newschool]] was very different from your previous [[school|oldschool]]. For one, it was very, very white. The white wall bricks, and the white tiled floor. Plaques decorated the walls. It looked fantastical. The school was full of children and adults, who you assumed were faculty or teachers. Since it was the first day of school, it seemed more hectic too.
 
@@ -200,8 +168,7 @@ Should you ask for help?
 
 [[You are too scared to ask. You are scared to bother someone. Everyone seemed so busy, much less care for two girls who they can barely understand.|Classes]]]
 
-(display: &quot;Words Learnt&quot;)
-(display: &quot;Confidence&quot;)</tw-passagedata><tw-passagedata pid="13" name="Genesis" tags="" position="200,775" size="100,100">She was the very first friend you made. As you both grew up, you both began to drift apart. But, despite this, your feelings of gratitute towards her never waned.
+(display: &quot;Words Learnt&quot;)(display: &quot;Confidence&quot;)</tw-passagedata><tw-passagedata pid="12" name="Genesis" tags="" position="200,775" size="100,100">She was the very first friend you made. As you both grew up, you both began to drift apart. But, despite this, your feelings of gratitute towards her never waned.
 
 You were grateful for how much she tried to help you and your sister, even when it was just translating. 
 
@@ -209,9 +176,7 @@ Through her, you found the importance of other people other than family in your 
 
 As an immigrant, their help was impactful to the little you who felt lost and isolated in a new country.
 
-[[Back|Talk]]</tw-passagedata><tw-passagedata pid="14" name="Help" tags="" position="75,900" size="100,100">(set: $confidence to it + 1)
-
-(if: $confidence is 2)[You were too nervous to ask an adult, so you tapped a nearby older looking girl to ask instead. &quot;Excuse me...?&quot;
+[[Back|Talk]]</tw-passagedata><tw-passagedata pid="13" name="Help" tags="" position="75,900" size="100,100">(set: $confidence to it + 1)(if: $confidence is 2)[You were too nervous to ask an adult, so you tapped a nearby older looking girl to ask instead. &quot;Excuse me...?&quot;
 
 You weren&#39;t sure if she was annoyed by your presence, but nevertheless, she said, &quot;What do you need?&quot; (mouseover: &quot;need&quot;)
 
@@ -222,8 +187,7 @@ You weren&#39;t sure if she was annoyed by your presence, but nevertheless, she 
 Flustered, you hastily thanked her. A little embarrassed by the interaction, you felt a little awkward.
 
 You grabbed you sister&#39;s hand, and walked to the hallway the girl pointed at. Turning into the hallway, you were faced with another dillemma. The hallway was even more crowded with people, and classes lined both walls. Now, you didn&#39;t know where your classes were.
-(display: &quot;Words Learnt&quot;)
-(display: &quot;Confidence&quot;)
+(display: &quot;Words Learnt&quot;)(display: &quot;Confidence&quot;)
 
 [[Continue|Classes]]]
 (elseif: $confidence &gt; 2)[You decided that it would be better to ask a faculty member. Scanning around, you spotted a Filipino looking lady with a walkie talkie hanging from her pants. Assuming she must be a faculty and slightly drawn in with the sense of familiarity, you walked up to her.
@@ -239,14 +203,12 @@ As if sensing you accent, she gleamed. &quot;You are Filipino?&quot; She spoke i
 Ms. Joy lead you to your class, &quot;This is your class. I&#39;ll make sure your sister get to hers too, don&#39;t worry.&quot; 
 
 Unlike your nervousness for the first day of class in America, your sister was excited. Seeing her fearlessness and being reassured by Ms. Joy, you felt that your sister would be just fine and safe. So, you both waved each other goodbye after promising to meet up where the bus dropped you off.
-(display: &quot;Words Learnt&quot;)
-(display: &quot;Confidence&quot;)
+(display: &quot;Words Learnt&quot;)(display: &quot;Confidence&quot;)
 
 [[Continue|Day]]]
 
 
-</tw-passagedata><tw-passagedata pid="15" name="Classes" tags="" position="225,900" size="100,100">&lt;img src=&quot;https://www.schoolsafetysolution.com/wp-content/uploads/2018/11/empty-school-hallway-1080x675.jpg&quot;&gt;
-With your sister in hand, you both wondered around for the longest time. A lady noticed you were lost and inquired, &quot;You ladies know where your classes are?&quot;
+</tw-passagedata><tw-passagedata pid="14" name="Classes" tags="" position="225,900" size="100,100">&lt;img src=&quot;https://www.schoolsafetysolution.com/wp-content/uploads/2018/11/empty-school-hallway-1080x675.jpg&quot;&gt;With your sister in hand, you both wondered around for the longest time. A lady noticed you were lost and inquired, &quot;You ladies know where your classes are?&quot;
 
 You shook your head no. She took your paper with your class assignment, and pointed to a near classroom, &quot;There&#39;s one of your classes.&quot; And pointed to another all the way down the hall, &quot;The other one&#39;s down there.&quot;
 
@@ -258,47 +220,37 @@ Should you accompany her?
 
 [[Yes, you have to make sure she get to her classroom.|Follow]]
 
-(display: &quot;Words Learnt&quot;)
-(display: &quot;Confidence&quot;)</tw-passagedata><tw-passagedata pid="16" name="Follow" tags="" position="250,1150" size="100,100">(set: $confidence to it + 1) You walked your sister to her class. You greeted her teacher, and explained to her your sisters&#39; little English knowledge. 
+(display: &quot;Words Learnt&quot;)(display: &quot;Confidence&quot;)</tw-passagedata><tw-passagedata pid="15" name="Follow" tags="" position="250,1150" size="100,100">(set: $confidence to it + 1) You walked your sister to her class. You greeted her teacher, and explained to her your sisters&#39; little English knowledge. 
 
 After making sure your sister was settled in her class, you immediantly rush back to your class. You greeted your teacher, and with a settled heart, set down your bookbag, found your seat, and waited for your day to finally begin.
+(display: &quot;Words Learnt&quot;)(display: &quot;Confidence&quot;)
 
-(display: &quot;Words Learnt&quot;)
-(display: &quot;Confidence&quot;)
-
-[[Day]]</tw-passagedata><tw-passagedata pid="17" name="newschool" tags="" position="525,900" size="100,100">&lt;img src=&quot;http://1.bp.blogspot.com/-BZJhin1gTDI/UOhPyYK3SZI/AAAAAAAAAOw/4O5XZAe3UNs/s1600/line.jpg&quot;&gt;
-Unlike the Philippines, your American school was very closed off. Rarely would you be able to see the outside unless it was recess. But, you didn&#39;t mind it at all.
+[[Day]]</tw-passagedata><tw-passagedata pid="16" name="newschool" tags="" position="525,900" size="100,100">&lt;img src=&quot;http://1.bp.blogspot.com/-BZJhin1gTDI/UOhPyYK3SZI/AAAAAAAAAOw/4O5XZAe3UNs/s1600/line.jpg&quot;&gt;Unlike the Philippines, your American school was very closed off. Rarely would you be able to see the outside unless it was recess. But, you didn&#39;t mind it at all.
 
 The difference would have to be the importance of quietness and stillness outside the classroom. The orderly line just to get somewhere. But, you got used to it.
 
 [[Philippines&#39;s School|oldschool]]
-[[Back|School]]</tw-passagedata><tw-passagedata pid="18" name="oldschool" tags="" position="375,900" size="100,100">&lt;img src=&quot;https://internationalschoolcommunity.com/blog/wp-content/uploads/2021/08/the-crowd-4467670_1920-1024x689.jpg&quot;&gt;
-Your old school in the Philippines was smacked in the middle of the city. It was an open-air sort of style. Where as soon as you exit your classroom, you&#39;ll be grace with the sound of the bustling city outside and the gush of the wind.
+[[Back|School]]</tw-passagedata><tw-passagedata pid="17" name="oldschool" tags="" position="375,900" size="100,100">&lt;img src=&quot;https://internationalschoolcommunity.com/blog/wp-content/uploads/2021/08/the-crowd-4467670_1920-1024x689.jpg&quot;&gt;Your old school in the Philippines was smacked in the middle of the city. It was an open-air sort of style. Where as soon as you exit your classroom, you&#39;ll be grace with the sound of the bustling city outside and the gush of the wind.
 
 But, you loved it. 
 
 The cheer of children playing in the basketball court. The giggle of girls as they&#39;re gossiping in a nearby picnic table. The Philippines&#39; flag waving in the middle of the open air court, where you sang the anthem every morning.
 
 [[America&#39;s School|newschool]]
-[[Back|School]]</tw-passagedata><tw-passagedata pid="19" name="Ms. Joy" tags="" position="275,1025" size="100,100">Ms. Joy was one of the people who helped you integrate into the school. At the first few days, she made sure that you and your sister were able to communicate well with your teachers. 
+[[Back|School]]</tw-passagedata><tw-passagedata pid="18" name="Ms. Joy" tags="" position="275,1025" size="100,100">Ms. Joy was one of the people who helped you integrate into the school. At the first few days, she made sure that you and your sister were able to communicate well with your teachers. 
 
 She gave you more confidence in bringing yourself to talk to new people, despite your fear of their judgement at your lack of English. She provided and linked you and your family to resources for immigrants new to the country. When your parents would come for school events, she was also there to assist y&#39;all.
 
 Actions by people like her made you realize the support system you were able to gratefully have.
 
-[[Back|Help]]</tw-passagedata><tw-passagedata pid="20" name="Day" tags="" position="75,1025" size="100,100">&lt;img src=&quot;https://e9i3r2v2.stackpathcdn.com/wp-content/uploads/2021/07/teacher-4784917_1920-998x665.jpg&quot;&gt;
-The class went by so quick. Maybe your nerves made you space off quite a bit. Or, the partial inability to understand the teacher. But, you were able to introduce yourself to your class. 
+[[Back|Help]]</tw-passagedata><tw-passagedata pid="19" name="Day" tags="" position="75,1025" size="100,100">&lt;img src=&quot;https://e9i3r2v2.stackpathcdn.com/wp-content/uploads/2021/07/teacher-4784917_1920-998x665.jpg&quot;&gt;The class went by so quick. Maybe your nerves made you space off quite a bit. Or, the partial inability to understand the teacher. But, you were able to introduce yourself to your class. 
 
 When they learned that you recently came from the Philippines, all the school children took an interest to you. You were overwhelmed with the questions of what random English word is translated to in Tagalog. But, nevertheless, it was fun.
 
 There were understanding students who you befriended quickly. Like Sandra, who also moved to the United States a year ago, and Melanie, who related to you as the only other Asian in the class.
+(set: $words to it + (a: &quot;student&quot;, &quot;teacher&quot;, &quot;learn&quot;, &quot;classmate&quot;))(display: &quot;Words Learnt&quot;)(display: &quot;Confidence&quot;)
 
-(set: $words to it + (a: &quot;student&quot;, &quot;teacher&quot;, &quot;learn&quot;, &quot;classmate&quot;))
-(display: &quot;Words Learnt&quot;)
-(display: &quot;Confidence&quot;)
-
-[[Continue|End]]</tw-passagedata><tw-passagedata pid="21" name="End" tags="" position="125,1150" size="100,100">&lt;img src=&quot;https://gray-wect-prod.cdn.arcpublishing.com/resizer/033UW5NvYnRBXRnYm03je-7t934=/1200x675/smart/filters:quality(85)/cloudfront-us-east-1.images.arcpublishing.com/gray/N4U6F4HATRGQNFEZJBRG6NUP7A.jpg&quot;&gt;
-As fun the day went, it was equivalently exhausting. Your class lined up to walk to your buses in a single file line. You waved your new friends goodbye.
+[[Continue|End]]</tw-passagedata><tw-passagedata pid="20" name="End" tags="" position="125,1150" size="100,100">&lt;img src=&quot;https://gray-wect-prod.cdn.arcpublishing.com/resizer/033UW5NvYnRBXRnYm03je-7t934=/1200x675/smart/filters:quality(85)/cloudfront-us-east-1.images.arcpublishing.com/gray/N4U6F4HATRGQNFEZJBRG6NUP7A.jpg&quot;&gt;As fun the day went, it was equivalently exhausting. Your class lined up to walk to your buses in a single file line. You waved your new friends goodbye.
 
 (if: $friends is not 0)[(if: $friends contains &quot;Genesis&quot;)[You met up with Genesis and your sister in the bus, and talked about the day.]]
 (else:) [You met up with your sister in the bus, and talked about the day.]
@@ -306,12 +258,9 @@ As fun the day went, it was equivalently exhausting. Your class lined up to walk
 In a flash, the bus stopped at your stop. (if: $confidence is 3)[You enthusiastically said goodbye to your bus driver, and her replying to you boosted your confidence. You got off the bus(set: $confidence to it + 1)](else:)[You got off the bus.]
 
 With your sister and still gushing about your day in your school, you both headed back home.
+(display: &quot;Words Learnt&quot;)(display: &quot;Confidence&quot;)
 
-(display: &quot;Words Learnt&quot;)
-(display: &quot;Confidence&quot;)
-
-[[Go home|Home]]</tw-passagedata><tw-passagedata pid="22" name="Home" tags="" position="125,1275" size="100,100">&lt;img src=&quot;http://images.parenting.mdpcdn.com/sites/parenting.com/files/styles/story_detail_enlarge/public/1100sq_story_Free_Range_Advocates.jpg?itok=P4uqMOEQ&quot;&gt;
-(if: $confidence &gt;= 4)[The whole day have felt fulfillng to you. You were able to learn new  words, and raise your confidence in speaking in English. Contrary to the anxiety and fear from the morning, you were ever the more excited for the next day to come.
+[[Go home|Home]]</tw-passagedata><tw-passagedata pid="21" name="Home" tags="" position="125,1275" size="100,100">&lt;img src=&quot;http://images.parenting.mdpcdn.com/sites/parenting.com/files/styles/story_detail_enlarge/public/1100sq_story_Free_Range_Advocates.jpg?itok=P4uqMOEQ&quot;&gt;(if: $confidence &gt;= 4)[The whole day have felt fulfillng to you. You were able to learn new  words, and raise your confidence in speaking in English. Contrary to the anxiety and fear from the morning, you were ever the more excited for the next day to come.
 
 As soon as your parents came home from work, you and your sister recounted your day to them. Perhaps, this move wasn&#39;t so bad afterall.]
 (else:)[It wasn&#39;t the most fun day for you. It was so stressful just to get through one day, you can barely imagine to get through a whole lifetime. You missed your life back in the Philippines. Here you had to struggle. 
@@ -319,13 +268,24 @@ As soon as your parents came home from work, you and your sister recounted your 
 As soon as your parents came home from work, you cried of how much you miss your old school, your friends, of how isolating it is to not be understood.
 
 Your parent reassured you it&#39;ll get better, that you&#39;ll get through this. And, you can only hope you will.]
+(display: &quot;Words Learnt&quot;)(display: &quot;Confidence&quot;)
 
-(display: &quot;Words Learnt&quot;)
-(display: &quot;Confidence&quot;)
+(link:&quot;Start Over&quot;)[(gotoURL:&quot;https://mdakiwas.github.io/Unspoken%20Words.html&quot;)]</tw-passagedata><tw-passagedata pid="22" name="Words Learnt" tags="Words-Learnt" position="550,200" size="100,100">(box: &quot;=XX=&quot;, 2)+(css: &quot;background-color:lightblue;color:black;width:1000px;height:auto&quot;)+(text-size:1)+(b4r:&quot;solid&quot;)+(b4r-color:&quot;lightblue&quot;)+(corner-radius:12)[New Words Learnt: (for: each _word, ...$words) [_word (unless: _word is $words&#39;s last)[,] ]]
 
-[[Play again|Intro]]</tw-passagedata><tw-passagedata pid="23" name="Words Learnt" tags="Words-Learnt" position="550,200" size="100,100">(box: &quot;=XX=&quot;, 2)+(css: &quot;background-color:lightblue;color:black;width:1000px;height:auto&quot;)+(text-size:1)+(b4r:&quot;solid&quot;)+(b4r-color:&quot;lightblue&quot;)+(corner-radius:12)[New Words Learnt: (for: each _word, ...$words) [_word (unless: _word is $words&#39;s last)[,] ]]
+</tw-passagedata><tw-passagedata pid="23" name="Confidence" tags="Confidence" position="550,325" size="100,100">(box: &quot;==X==&quot;, 2)+(css: &quot;background-color:lightblue;color:black;width:200px;height:auto&quot;)+(text-size:1)+(b4r:&quot;solid&quot;)+(b4r-color:&quot;lightblue&quot;)+(corner-radius:12)[Confidence: (print: $confidence)]</tw-passagedata><tw-passagedata pid="24" name="Bus" tags="" position="300,400" size="100,100">&quot;Good morning!&quot; The bus driver tells you. 
 
-</tw-passagedata><tw-passagedata pid="24" name="Confidence" tags="Confidence" position="550,325" size="100,100">(box: &quot;==X==&quot;, 2)+(css: &quot;background-color:lightblue;color:black;width:200px;height:auto&quot;)+(text-size:1)+(b4r:&quot;solid&quot;)+(b4r-color:&quot;lightblue&quot;)+(corner-radius:12)[Confidence: (print: $confidence)]</tw-passagedata></tw-storydata>
+(if: $confidence &gt;= 1)[Your earlier interactions gave you more confidence in talking in English. So, despite not being sure about what the bus driver said, you assumed it was a greeting and you responded back with a smile, &quot;Good morning!&quot;
+(set: $words to it + (a:&quot;Good morning&quot;))] 
+(else:)[Your confidence hindered you in responding back to the bus driver. Despite feeling bad that you ignored her, you were too scared to respond back.]
+
+You guided your sister to sit into a empty seat and you sat next to her. The bus was overwhelming, there were loud children bouncing from seat to seat. You wondered how they found the energy to be so lively so early in the morning. (mouseover: &quot;energy&quot;)[This was the very first culture shock you ever experienced.]
+
+Your sister looked unbothered by the noice though. Instead, she seemed excited. In your original language, Tagalog, she began speaking to a kid seating at the seat across hers.
+
+In embarrassment, you told her to stop. &quot;They don&#39;t understand you!&quot; You told her in [[Tagalog]]. Your sister sulked in disappointment and quited down. Guilty, you tried to distract her from the isolation by talking to her instead.
+(display: &quot;Words Learnt&quot;)(display: &quot;Confidence&quot;)
+
+[[Continue|Girl]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
