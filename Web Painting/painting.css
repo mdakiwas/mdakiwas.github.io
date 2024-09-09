@@ -1,11 +1,64 @@
 header {
     background-color: #feffb2;
+    padding: 50px;
+    margin: 20px;   
+    border: 30px dotted #8041ff;
+}
+
+header h1 {
+    background-color: #ff63d5;
+    padding: 25px;
+    margin: 15px;
 }
 
 main {
     background-color: #d7b2ff;
+    border: 10px solid hsl(190, 55%, 73%);
 }
 
 main section {
     background-color: #b2ffc3;
+    padding: 25px;
+    border-radius: 75%;
+    border: 7px solid #fff834;
+}
+
+main section section {
+    background-color: aliceblue;
+    padding: 25px;
+    border-radius: 70%;
+    border: 7px solid #fff834;
+    margin: 25px;
+}
+
+main section section section {
+    background-color: antiquewhite;
+    padding: 30px;
+    border: 65%;
+    border: 7px solid #fff834;
+    margin: 25px;
+}
+
+main aside {
+    background-color: #ff4b4b;
+    border-radius: 10px;
+    padding: 50px;
+}
+
+footer section {
+    background-color: rgb(68, 255, 118);
+    padding: 45px;
+}
+
+footer section ul {
+    background-color: #ff0062;
+    border: 55px dashed #9990e2;
+    margin: 25px;
+}
+
+footer section ul li {
+    background-color: #0073ff;
+    display: inline-block;
+    padding: 15px;
+    margin: 10%;
 }
