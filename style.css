@@ -1,3 +1,9 @@
+#indexhtml {
+    main ul {
+        margin: 20px;
+    }
+}
+
 #window {
     width: 50%;
     height: 853px;
@@ -16,13 +22,24 @@
 }
 
 #nexttoother {
-    display: inline;
+    text-align: justify;
+}
+
+#nexttoother:after {
+    content: '';
+    width: 100%;
+    display: inline-block;
 }
 
 #nexttoother li {
-    display: inline;
+    display: inline-block;
+    justify-content: space-between;
     font-size: 35px;
     font-weight: bold;
+}
+
+header {
+    margin-bottom: 35px;
 }
 
 html {
@@ -30,8 +47,9 @@ html {
 }
 
 body {
-    padding: 40px;
+    padding: 40px 20px;
     font-size: 100%;
+    margin: 0;
 }
 
 ul {
