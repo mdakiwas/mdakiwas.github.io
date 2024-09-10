@@ -1,10 +1,10 @@
-#indexhtml {
+#indexcss {
     main ul {
         margin: 20px;
     }
 }
 
-#homehtml {
+#homecss {
     aside {
         position: absolute;
         bottom: 0;
