@@ -29,21 +29,25 @@
     transform: scale(-1, 1);
 }
 
-#nexttoother {
+.nexttoother {
     text-align: justify;
 }
 
-#nexttoother:after {
+.nexttoother:after {
     content: '';
     width: 100%;
     display: inline-block;
 }
 
-#nexttoother li {
+.nexttoother li {
     display: inline-block;
     justify-content: space-between;
     font-size: 35px;
     font-weight: bold;
+}
+
+#indexhead {
+    text-shadow: 2px 2px black;
 }
 
 header {
