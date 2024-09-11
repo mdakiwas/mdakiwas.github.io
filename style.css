@@ -1,0 +1,130 @@
+
+/* notes: spend some time making comments on how Flexbox and Grid are working here and
+personalize this portfolio page using google fonts, different colors, different hover and active styling, maybe a different layout or viewport response*/
+
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+    
+    /*this is how I do the border box fix from the "the box model layouts in CSS from flexbox to grid" LinkedIn Learning
+    https://www.linkedin.com/learning-login/share?account=42563596&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fcss-layouts-from-float-to-flexbox-and-grid%2Fthe-box-model-and-layouts%3Ftrk%3Dshare_video_url%26shareId%3DnbY4ZLwhR2KIGIplOu9BiA%253D%253D*/
+
+body{
+    background-color: white;
+}
+
+header, footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    border: 1px solid black;
+    /* background-color: rgb(82, 99, 69);  play with a color scheme! */
+}
+
+main {
+    font-family: 'Times New Roman', Times, serif; /* try using a google font instead*/
+    border: 1px, solid, black;
+}
+
+nav {
+    width: 960px;
+    height: 100px;
+}
+
+#nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+#home {
+    flex: auto;
+    padding: 20px;
+ }
+
+#nav-links li{
+   padding: 1em; /*em is a unit of measurement which indicates size relative to the curent font size */
+}
+
+#projects-grid{
+    display: grid;
+    max-width: 960px;
+    grid-template-columns: 1fr 1fr 1fr; /* question: what does fr mean? answer: fraction*/
+    grid-template-rows: auto; /*adjust rows according to screen*/
+    grid-column-gap: 10px;
+    grid-row-gap: 15px; 
+    /* background: rgba(102, 119, 59, 0.5);  play with color*/
+    
+}
+
+#page_title{
+    grid-column: 1/4;
+    text-align: center;
+    max-width: 100%;
+    padding: 40px 0px;
+}
+
+.project_item {
+    display: grid;  /* we have a grid inside a grid here, with each item as its own grid*/
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-areas:
+    "image number"
+    "image title"
+    "image description";
+    grid-column-gap: 15px;
+    align-items: center;
+    background: rgba(232, 232, 231, 0.5); /*  play with color*/
+}
+
+.project_image { 
+    grid-area: image;
+    margin: 0 auto; 
+}
+.project_number { 
+    grid-area: number; 
+}
+.project_title { 
+    grid-area: title; 
+}
+.project-description { 
+    grid-area: description; 
+}
+iframe{ border: none; }
+
+#footer-items{
+    display: flex;
+    box-sizing: border-box;
+    list-style-type: none;
+    width: 960px;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-top: 1px solid black; /* again, play with this styling*/
+    margin-top: 2rem;
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 850px){ /* what is going on here?*/
+    #projects-grid{
+    grid-template-columns: 1fr 1fr;
+    }
+    
+    #page_title{
+        grid-column: 1/3;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    #projects-grid{
+    grid-template-columns: 1fr;
+    }
+    
+    #page_title{
+        grid-column: 1/2;
+    }
+}
