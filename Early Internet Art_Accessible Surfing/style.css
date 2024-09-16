@@ -1,6 +1,56 @@
 #indexcss {
+    background-color: rgb(35, 15, 4);
+
     main ul {
         margin: 20px;
+    }
+
+    header ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        font-size: 100px;
+        font-weight: bold;
+    }
+    
+    header ul li {
+        flex: 1 1 40%;
+        margin: 10px;
+        box-sizing: border-box;
+    }
+
+    #header-img {
+        flex: 0 1 auto;
+    }
+
+    #header-img img {
+        float: left;
+    }
+
+    #banner {
+        background-color: black;
+        padding: 5px;
+    }
+
+    main section {
+        padding: 50px 500px;
+    }
+
+    main section h3 {
+        font-size: 60px;
+        color: rgb(255, 213, 129);
+        padding: 0;
+        margin: 0
+    }
+
+    main section h5 {
+        font-size: 90px;
+        color: rgb(255, 148, 82);
+        padding: 0;
+        margin: 0;
     }
 }
 
@@ -12,12 +62,20 @@
     }
 }
 
+#indecisioncss {
+    main {
+        padding: 50px;
+    }
+}
+
 #window {
+    position: relative;
     width: 50%;
     height: 853px;
+    display: block;
     object-fit: cover;
     border-radius: 42% 42% 0% 0% / 40% 40% 30% 30%;
-    border: 20px double rgb(83, 28, 0);
+    border: 20px double rgb(227, 202, 112);
 }
 
 .flip {
@@ -29,25 +87,22 @@
     transform: scale(-1, 1);
 }
 
-.nexttoother {
-    text-align: justify;
+.textshadow {
+    text-shadow: 10px 3px rgb(255, 234, 159);
 }
 
-.nexttoother:after {
-    content: '';
-    width: 100%;
-    display: inline-block;
+.textstroke {
+    color: rgb(255, 255, 255);
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: rgb(172, 89, 0);
 }
 
-.nexttoother li {
-    display: inline-block;
-    justify-content: space-between;
-    font-size: 35px;
-    font-weight: bold;
-}
-
-#indexhead {
-    text-shadow: 2px 2px black;
+a {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: rgb(64, 110, 38);
+    font-size: 25px;
 }
 
 header {
@@ -83,11 +138,7 @@ li {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 75%;
-}
-
-section {
-    background-color: black;
+    width: 75%; 
 }
 
 #textannounce {
