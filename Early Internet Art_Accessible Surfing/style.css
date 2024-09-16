@@ -74,16 +74,18 @@
     }
 
     aside {
-        position: absolute;
-        bottom: 10%;
+        position: sticky;
+        float: center;
+        bottom: 15%;
         background-color: black;
-        padding: 5%;
+        padding: 15px;
     }
 
     aside p {
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-size: 50px;
+        font-size: 70px;
         color: white;
+        text-align: center;
     } 
 }
 
