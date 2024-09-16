@@ -55,10 +55,42 @@
 }
 
 #homecss {
+    header {
+        margin: 0;
+    }
+
+    header h3 {
+        font-size: 25px;
+    }
+
+    main p {
+        font-size: 15px;
+        background-color: rgb(255, 247, 198);
+        padding: 2px;
+    }
+
+    img {
+        padding: 20px;
+    }
+
     aside {
         position: absolute;
-        bottom: 0;
+        bottom: 10%;
         background-color: black;
+        padding: 5% 7%;
+    }
+
+    aside p {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 50px;
+        color: white;
+    } 
+}
+
+#homealtcss {
+    main p {
+        font-size: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif   ;
     }
 }
 
