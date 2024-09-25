@@ -1,0 +1,480 @@
+.lacquer-regular {
+    font-family: "Lacquer", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.matemasie-regular {
+    font-family: "Matemasie", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}  
+
+.nosifer-regular {
+    font-family: "Nosifer", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}  
+
+.creepster-regular {
+    font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.griffy-regular {
+    font-family: "Griffy", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}   
+
+.shadows-into-light-regular {
+    font-family: "Shadows Into Light", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }  
+
+.outside-stroke {
+    paint-order: stroke fill;
+}
+
+.textbox {
+    text-align: center;
+    margin: 25px 25px;
+    border: 7px solid #efd6ac;
+    border-radius: 35px;
+    background-color: #bb4c08;
+    position: relative;
+}
+
+.textbox p {
+    margin: 10px 0;
+    font: 25px "Shadows Into Light", cursive;
+}
+
+.textbox img {
+    width: 50px;
+    height: auto;
+}
+
+.nextbutton {
+    width: 50px;
+    height: auto; 
+    float: right;
+    margin-left: 10px;
+    padding: 0 50px 5px 0;
+}
+
+.textbox::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    margin: 0;
+    background-color: #251a27;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+#indexcss {
+    padding: 0;
+    h1 {
+        font: 100px "Matemasie", sans-serif;
+        color: black;
+        -webkit-text-stroke: 30px rgb(255, 255, 255);
+        margin: 10% 0 0 0;
+    }
+    h2 {
+        font: 35px "Lacquer", system-ui;
+    }
+    a {
+        display: inline-block;
+        font: 55px "Lacquer", system-ui;
+        color: #efd6ac;
+        text-decoration: none;
+        background-color: #e36414;
+        border: 7px solid #efd6ac;
+        border-radius: 50px;
+        padding: 30px 50px;
+        margin: 30px;
+    }
+    a.hover {
+        background-color: rgb(155, 41, 0);
+        font: 55px white;
+    }
+    main {
+        padding: 75px 250px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    section {
+        flex: 2;
+        margin: 0;
+        padding: 0;
+    }   
+    aside {
+        margin: 0;
+        padding: 0;
+        flex: 1.5;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    } 
+}
+
+#floatcss {
+    section {
+        position: relative;
+        padding: 10px;
+        overflow: hidden;
+    }
+    .ghostbox {
+        height: 50vh;
+        img {
+            width: 25%;
+            height: auto;
+        }
+    }
+    section img {
+        position: relative; 
+        opacity: 0.8; 
+        z-index: 1;
+        margin-bottom: 0;
+        display: block;
+    }
+    #ghost1 {
+        float: left;
+        width: 320px;
+        height: auto;
+        transform: translateY(-20px);
+        z-index: 3; 
+    }
+    #ghost2 {
+        float: right;
+        width: 200px;
+        height: auto;
+        transform: translateY(120px); 
+        z-index: 1; 
+    }
+    #ghost3 {
+        float: left;
+        width: 325px;
+        height: auto;
+        transform: translateX(-40px); 
+        z-index: 4; 
+    }
+    #ghost4 {
+        float: right;
+        width: 250px;
+        height: auto;
+        transform: translateX(-200px);
+        z-index: 1;
+    }
+    #ghost5 {
+        float: left;
+        width: 300px;
+        height: auto;
+        transform: translate(-50px, 0px); 
+        z-index: 5; 
+    }
+    #ghost6 {
+        float: right;
+        width: 300px;
+        height: auto;
+        transform: translate(-150px, -300px); 
+        z-index: 2; 
+    } 
+}
+
+#fightcss {
+    #monsterbox {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Create 4 equal columns */
+        position: relative; /* Allow for absolute positioning of images */
+        padding: 60px 0;
+    }
+    #caster {
+        width: 300px;
+        height: auto;
+    }
+    #sadako {
+        width: 400px;
+        height: auto;
+    }
+    #countd {
+        width: 400px;
+        height: auto;
+    }
+    #brian {
+        width: 400px;
+        height: auto;
+    }
+    .textbox {
+        grid-column: 1 / -1; /* Span the entire width for the textbox */
+        text-align: center; /* Center text */
+    }
+    img {
+        justify-self: center; /* Center images in their grid cells */
+    }
+
+    @media (max-width: 1200px) {
+        #monsterbox {
+            grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+        }
+    }
+    
+    @media (max-width: 900px) {
+        #monsterbox {
+            grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+        }
+    }
+    
+    @media (max-width: 600px) {
+        #monsterbox {
+            grid-template-columns: 1fr; /* 1 column for very small screens */
+        }
+    }
+}
+
+#flexboxcss {
+    #monsterbox {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); 
+        position: relative; 
+        padding: 60px 0;
+        height: 45vh;
+        overflow: hidden;
+    }
+    #caster {
+        width: 300px;
+        height: auto;
+    }
+    #sadako {
+        width: 400px;
+        height: auto;
+    }
+    #countd {
+        width: 400px;
+        height: auto;
+    }
+    #brian {
+        width: 400px;
+        height: auto;
+    }
+    .textbox {
+        grid-column: 1 / -1; 
+        text-align: center;
+    }
+    img {
+        justify-self: center;
+    }
+
+    @media (max-width: 1200px) {
+        #monsterbox {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    
+    @media (max-width: 900px) {
+        #monsterbox {
+            grid-template-columns: repeat(2, 1fr); 
+        }
+    }
+    
+    @media (max-width: 600px) {
+        #monsterbox {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    #inventory { 
+        display: flex; 
+        justify-content: flex-start; 
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 15px 20px; 
+        margin: 20px auto; 
+        border: 7px solid #efd6ac; 
+        border-radius: 35px; 
+        background-color: #bb4c08; 
+        width: fit-content;
+    }
+    .inventory-item {
+        flex: 0 1 auto; 
+        min-width: 100px; 
+        text-align: center; 
+        border: 5px solid #efd6ac; 
+        border-radius: 20px;
+        background-color: #3f1800; 
+        padding: 10px; 
+    }
+    .inventory-item img {
+        width: 100%; 
+        height: auto; 
+    }
+
+    @media (max-width: 600px) {
+        #inventory {
+            flex-direction: column; 
+            align-items: center; 
+        }
+    }    
+}
+
+#fightfincss {
+    background-image: url(Images/gate-3144351_1280.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#gridcss {
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .graveyard {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px; 
+        padding: 20px;
+    }
+    .grave {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(Images/granite-8858-in-architextures.jpg);
+        background-size: cover;
+        color: #fff;
+        text-decoration: none;
+        border: 3px solid #888;
+        border-radius: 15px;
+        position: relative;
+        transition: transform 0.2s, background-color 0.2s;
+    }
+    .grave1 {
+        grid-column: span 2; 
+        height: 180px; 
+    }
+    
+    .grave2 {
+        height: 200px; /* Custom height */
+    }
+    
+    .grave3 {
+        grid-column: span 1; /* Span one column */
+        height: 250px; /* Custom height */
+    }
+    
+    .grave4 {
+        grid-column: span 2; /* Span two columns */
+        height: 180px; /* Custom height */
+    }
+    
+    .grave5 {
+        grid-column: span 1;
+        height: 60px; 
+    }
+    
+    .grave6 {
+        height: 70px; 
+    }
+    
+    .grave:hover {
+        transform: scale(1.05); 
+        background-color: #555; 
+    }
+    
+    .grave:active {
+        transform: scale(0.95);
+    }
+    .grave::before {
+        content: '';
+        display: block;
+        width: 150px;
+        height: 150px;
+        background-image: url(Images/hs6.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-right: 10px;
+        flex-shrink: 0;
+    }
+}
+
+#keycss {
+    section{
+        margin-bottom: 0;
+    }
+    img {
+        width: 40%;
+        height: auto;
+    }
+}
+
+#fincss {
+    padding: 0;
+    h1 {
+        font: 100px "Matemasie", sans-serif;
+        color: black;
+        -webkit-text-stroke: 30px rgb(255, 255, 255);
+        margin: 10% 0 0 0;
+    }
+    h2 {
+        font: 35px "Lacquer", system-ui;
+    }
+    main {
+        padding: 75px 250px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    section {
+        flex: 2;
+        margin: 0;
+        padding: 0;
+    }   
+    aside {
+        margin: 0;
+        padding: 0;
+        flex: 1.5;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    } 
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .buttons a {
+        font: 30px "Lacquer", system-ui;
+        color: #efd6ac;
+        text-decoration: none;
+        background-color: #e36414;
+        border: 7px solid #efd6ac;
+        border-radius: 25px;
+        padding: 25px 45px;
+        margin: 20px;
+    }
+    a.hover {
+        background-color: rgb(155, 41, 0);
+        font: 55px white;
+    }
+    @media (max-width: 600px) {
+        aside {
+            flex-direction: column; 
+            align-items: center; 
+        }
+    }   
+}
+
