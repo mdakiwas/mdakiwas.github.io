@@ -313,10 +313,15 @@ body {
         border-radius: 20px;
         background-color: #3f1800; 
         padding: 10px; 
+        
+    }
+    a {
+        font-color: white;
+        text-decoration: none;
     }
     .inventory-item img {
-        width: 100%; 
-        height: auto; 
+        width: 40px; 
+        height: 40px; 
     }
 
     @media (max-width: 600px) {
