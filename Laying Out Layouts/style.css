@@ -195,8 +195,8 @@ body {
 #fightcss {
     #monsterbox {
         display: grid;
-        grid-template-columns: repeat(4, 1fr); /* Create 4 equal columns */
-        position: relative; /* Allow for absolute positioning of images */
+        grid-template-columns: repeat(4, 1fr); 
+        position: relative;
         padding: 60px 0;
     }
     #caster {
@@ -216,28 +216,28 @@ body {
         height: auto;
     }
     .textbox {
-        grid-column: 1 / -1; /* Span the entire width for the textbox */
-        text-align: center; /* Center text */
+        grid-column: 1 / -1; 
+        text-align: center;
     }
     img {
-        justify-self: center; /* Center images in their grid cells */
+        justify-self: center; 
     }
 
     @media (max-width: 1200px) {
         #monsterbox {
-            grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+            grid-template-columns: repeat(3, 1fr); 
         }
     }
     
     @media (max-width: 900px) {
         #monsterbox {
-            grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+            grid-template-columns: repeat(2, 1fr); 
         }
     }
     
     @media (max-width: 600px) {
         #monsterbox {
-            grid-template-columns: 1fr; /* 1 column for very small screens */
+            grid-template-columns: 1fr; 
         }
     }
 }
@@ -377,17 +377,17 @@ body {
     }
     
     .grave2 {
-        height: 200px; /* Custom height */
+        height: 200px; 
     }
     
     .grave3 {
-        grid-column: span 1; /* Span one column */
-        height: 250px; /* Custom height */
+        grid-column: span 1;
+        height: 250px;
     }
     
     .grave4 {
-        grid-column: span 2; /* Span two columns */
-        height: 180px; /* Custom height */
+        grid-column: span 2; 
+        height: 180px; 
     }
     
     .grave5 {
@@ -487,4 +487,3 @@ body {
         }
     }   
 }
-
