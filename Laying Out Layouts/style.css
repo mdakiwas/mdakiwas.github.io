@@ -308,16 +308,21 @@ body {
     .inventory-item {
         flex: 0 1 auto; 
         min-width: 100px; 
+        height: 90px;
         text-align: center; 
         border: 5px solid #efd6ac; 
         border-radius: 20px;
         background-color: #3f1800; 
-        padding: 10px; 
-        
+        padding: 5px; 
+        p {
+            margin: 0;
+        }
     }
     a {
-        font-color: white;
+        color: white;
+        font: 20px "Shadows Into Light", cursive;
         text-decoration: none;
+        margin: 0;
     }
     .inventory-item img {
         width: 40px; 
