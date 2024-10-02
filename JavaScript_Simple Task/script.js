@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const combinedYears = age + yearsLeft;
 
             // Redirect to the result page with query parameters
-            const resultPageUrl = `../Pages/clock.html?timeLeft=${encodeURIComponent(timeLeft)}&age=${age}&combinedYears=${combinedYears}`;
+            const resultPageUrl = `Pages/clock.html?timeLeft=${encodeURIComponent(timeLeft)}&age=${age}&combinedYears=${combinedYears}`;
             window.location.href = resultPageUrl;
         });
     }
