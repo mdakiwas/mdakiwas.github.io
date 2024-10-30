@@ -1,0 +1,363 @@
+/*color palette: 
+Lilac #d773a2 Blue Green #07bb9c Gold #ffd743 Lavender #a06ab4
+Cyan #2ff3e0 Gold #f8d210 Pink #fa26a0 Chili Pepper #f51720*/
+
+.yusei-magic-regular {
+    font-family: "Yusei Magic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+#loading-screen {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background-color: #FFD743;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loading-screen h1 {
+    font-size: 10em;
+    margin: 0;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: left;
+}
+
+header ul li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+header nav ul li.tab {
+    padding: 20px;
+    border-top: black solid 1px;
+    border-left: black solid 1px;
+    border-right: black solid 1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 118px;
+    cursor: pointer;
+}
+
+header a {
+    color: black;
+    text-decoration: none;
+}
+
+header ul li.tab:hover {
+    background-color: #f3c04d;
+    border-radius: 20px;
+    text-decoration: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.active-tab {
+    background-color: #f3c04d;
+    border-radius: 20px;
+    text-decoration: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#fauxnavbar {
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: #f3c04d;
+    padding: 10px;
+    align-items: center;
+}
+
+#fauxnavbar img {
+    width: 20px;
+}
+
+#fauxnavbar * {
+    margin: 0 5px;
+}
+
+#searchbar {
+    width: 65%;
+    padding: 5px;
+    height: auto;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 15px;
+}
+
+#searchbar * {
+    display: inline-block;
+}
+
+section {
+    display: none;
+}
+
+section.active {
+    display: block;
+}
+
+
+#window {
+    position: relative;
+    object-fit: cover;
+    border-radius: 42% 42% 0% 0% / 40% 40% 30% 30%;
+    width: auto;
+    height: 100vh;
+    border: #000000 solid 3px;
+}
+
+#homecss img {
+    height: 80vh;
+    max-width: 100%;
+    max-height: 100%;
+    grid-column: 1/3;
+    grid-row: 1/3;
+    z-index: 0;
+}
+
+#homecss {
+    display: grid;
+    grid-template-columns: 45% 20% 35%;
+    grid-template-rows: auto;
+    align-items: center;
+    margin: 1em;
+    position: relative;
+}
+
+#title {
+    width: fit-content;
+    height: fit-content;
+    border-radius: 5px;
+    background: rgba(255, 255, 255);
+    border: #000000 solid 3px;
+    text-align: right;
+    grid-column: 2/4;
+    grid-row: 1/2;
+    z-index: 1;
+}
+
+.topbar {
+    display: flex;
+    flex-direction: row-reverse;
+    width: auto;
+    height: 15px;
+    padding: 5px;
+    text-align: right;
+    background-color: #f3c04d;
+    border-bottom: #000000 solid 3px;
+}
+
+.topbar img {
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 100%;
+}
+
+#intro-blurb {
+    width: 90%;
+    border: 3px solid #000000;
+    grid-column: 3/4;
+    grid-row: 2/3;
+    z-index: 2;
+    text-align: center;
+    align-self: start;
+    justify-self: center;
+    padding-bottom: 3em;
+}
+
+h1 {
+    font-family: "Yusei Magic", sans-serif;
+    font-size: 2em;
+    margin: .5em;
+}
+
+#intro-blurb p {
+    margin: 1em;
+    margin-bottom: 2em;
+}
+
+a.button {
+    color: black;
+    text-decoration: none;
+    background-color: #f3c04d;
+    border-radius: 60px;
+    padding: 15px 40px;
+    border: solid black 3px;
+    margin-top: 10px;
+    font-size: 2em;
+    font-family: "Yusei Magic", sans-serif;
+    -webkit-text-fill-color: #f7f7f7;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+}
+
+#aboutcss {
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin: 1em;
+    row-gap: 1em;
+}
+
+.textbox {
+    justify-self: center;
+    font-size: 1.25em;
+    width: 90%;
+    border: #000000 solid 3px;
+}
+
+#aboutcss p {
+    padding: 1em;
+}
+#img1 {
+    grid-column: 2/4;
+    width: 100%;
+}
+#img2 {
+    grid-column: 1/3;
+}
+#p3 {
+    grid-column: 1/4;
+}
+#imgcontainer {
+    grid-column: 1/4;
+    grid-row: 4/5;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#imgcontainer img {
+    width: 33%;
+}
+#img3 {
+    grid-column: 2/4;
+}
+#img4 {
+    grid-column: 1/3;
+}
+#aboutcss span {
+    color: #f3c04d;
+    font-family: "Yusei Magic", sans-serif;
+    font-size: xx-large;
+}
+#aboutcss img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+#workscss {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 1.5em;
+    margin: 1em;
+}
+h2 {
+    margin: 1em;
+    font-family: "Yusei Magic", sans-serif;
+}
+#workscss img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 2em;
+}
+#workscss article {
+    width: 33%;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+#workscss img {
+    width: 75%;
+    height: auto;
+}
+#workscss p {
+    margin-bottom: 2em;
+}
+
+#contactcss {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+}
+#contactcss p {
+    text-align: center;
+}
+#contactcss ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1em;
+}
+#contactcss li {
+    padding: 20px;
+    list-style-type: none;
+}
+#contactcss a {
+    font-size: 1.5em;
+}
+iframe {
+    margin-top: 1em;
+    justify-self: center;
+    align-items: center;
+    align-self: center;
+}
+
+.textstroke-yellow {
+    color: #f3c04d;
+    -webkit-text-fill-color: #f3c04d;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+}
+
+.textstroke-lilac {
+    color: #d773a2;
+    -webkit-text-fill-color: #d773a2;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: #000000;
+}
+
+.textstroke-bluegreen {
+    color: #07bb9c;
+    -webkit-text-fill-color: #07bb9c;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: #000000;
+}

@@ -1,17 +1,206 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" dir="ltr">
-        <meta name="description" content="Laying Out Layouts">
-        <meta name="keywords" content="HTML, CSS">
+        <meta name="description" content="Personal Website">
+        <meta name="keywords" content="HTML, CSS, JS">
         <meta name="author" content="Marlette Dakiwas">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
-        <title>Start</title>
+        <script src="script.js"></script>
+        <title>HELLO!</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+        </style>
     </head>
 
     <body>
+        <div id="loading-screen">
+            <h1 class="textstroke-bluegreen">LOADING...</h1>
+        </div>
         
+        <header>
+            <nav>
+              <ul>
+                <li class="tab" data-section="home" data-text="https://hottogo.com/home/"><a href="#home">Home</a></li> 
+                    <!--The data-* attribute is used to store custom data private to the page or application. 
+                    The data-* attribute gives us the ability to embed custom data attributes on all HTML elements. -->
+                <li class="tab" data-section="about" data-text="https://aptaptaptapt.com/aboutme/"><a href="#about">About Me</a></li>
+                <li class="tab" data-section="works" data-text="https://youeatalotoflettucebutyou#retoxic.com/works/"><a href="#works">Works</a></li>
+                <li class="tab" data-section="contact" data-text="https://fromthestart.com/contact/"><a href="#contact">Contact</a></li>
+              </ul>
+            </nav>
+            <div id="fauxnavbar">
+                <img src="graphics/icons/arrowhead-thin-outline-to-the-left.png" alt="faux arrow left button">
+                <img src="graphics/icons/arrow-point-to-right.png" alt="faux arrow right button">
+                <img src="graphics/icons/arrow-circle.png" alt="faux reload button">
+                <div id="searchbar">
+                    <img src="graphics/icons/magnifying-glass.png" alt="faux search button">
+                    <span id="searchtitle"></span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section id="home" class="tabsection active">
+                <section id="homecss">
+                    <img src="graphics/portrait.png" alt="Marlette Dakiwas portrait" id="window">
+                    <aside id="title">
+                        <div class="topbar">
+                            <img src="graphics/icons/delete.png" alt="faux exit button">
+                            <img src="graphics/icons/windows-couple.png" alt="faux multi-window view button">
+                            <img src="graphics/icons/minus-sign-of-a-line-in-horizontal-position.png" alt="faux minimize button">
+                        </div>
+                        <h1 class="textstroke-lilac">Senior at the University of North Carolina at Chapel Hill 
+                            studying Information Science and New Media Communication.</h1>
+                    </aside>
+                    <aside id="intro-blurb">
+                        <div class="topbar">
+                            <img src="graphics/icons/delete.png" alt="faux exit button">
+                            <img src="graphics/icons/windows-couple.png" alt="faux multi-window view button">
+                            <img src="graphics/icons/minus-sign-of-a-line-in-horizontal-position.png" alt="faux minimize button">
+                        </div>
+                        <h1 class="textstroke-bluegreen">Aspirations</h1>
+                        <p>I am looking into exploring Data Analysis and Visualization. I also envision to pursue Project Management in the future.</p>
+                        <p>I am currently looking for Spring 2025 internships to further my knowledge and apply my in-course experiences in the real world.</p>
+                        <p>For more information about my college experiences, click the button below to view my résumé!</p>
+                        <a href="documents/resume.pdf" class="button">Resume</a>
+                    </aside>
+                </section>
+            </section>
+            <section id="about" class="tabsection">
+                <h1 class="textstroke-lilac">About Me</h1>
+                <section id="aboutcss">
+                    <aside class="textbox">
+                        <div class="topbar">
+                            <img src="graphics/icons/delete.png" alt="faux exit button">
+                            <img src="graphics/icons/windows-couple.png" alt="faux multi-window view button">
+                            <img src="graphics/icons/minus-sign-of-a-line-in-horizontal-position.png" alt="faux minimize button">
+                        </div>
+                        <p><span class="textstroke-yellow">Hello!</span> I am Marlette Jessa Dakiwas, a Filipino-American student attending the University of North Carolina at Chapel Hill.
+                        I am a senior studying Information Science and New Media Communication, with a minor in Chinese.
+                        I am a Carolina Covenant, Road to Hire, and Project One scholar.</p>
+                    </aside>
+                    <img src="../graphics/r2hstuamb.jpeg" alt="Road to Hire Student Ambassador" id="img1">
+                    <img src="../graphics/seasa.jpg" alt="SEASA Cultural Wear event" id="img2">
+                    <aside class="textbox">
+                        <div class="topbar">
+                            <img src="graphics/icons/delete.png" alt="faux exit button">
+                            <img src="graphics/icons/windows-couple.png" alt="faux multi-window view button">
+                            <img src="graphics/icons/minus-sign-of-a-line-in-horizontal-position.png" alt="faux minimize button">
+                        </div>
+                        <p>Outside the classroom, I am a Design Executive of UNC-CH Southeast Asian Student Association and a two-year
+                            Gaming Assistant under UNC-CH's Gaming Arena.
+                            I volunteer in the Carolina Covenant office as a Covenant Connector, ensuring to connect fellow Covenant
+                            scholars to valued campus and program resources.</p>
+                    </aside>
+                    <aside class="textbox" id="p3">
+                        <div class="topbar">
+                            <img src="graphics/icons/delete.png" alt="faux exit button">
+                            <img src="graphics/icons/windows-couple.png" alt="faux multi-window view button">
+                            <img src="graphics/icons/minus-sign-of-a-line-in-horizontal-position.png" alt="faux minimize button">
+                        </div>
+                        <p>Additionally, I am a Road to Hire Campus Student Ambassador tasked with assisting in the smooth transition into
+                            college of UNC-CH students under the Road to Hire Program. My roots as an immigrant, first-generation, and Title-1 student has impassioned me to advocate for student
+                            equity and in helping students like myself in achieving their best selves in college.</p>
+                    </aside>
+                    <aside id="imgcontainer">
+                        <img src="../graphics/votefam.jpg" alt="Family after voting">
+                        <img src="../graphics/trailfrie.jpg" alt="Friends after a hike">
+                        <img src="../graphics/renfairefam.jpg" alt="Family in the Renaissance Faire">
+                    </aside>
+                    <aside class="textbox">
+                        <div class="topbar">
+                            <img src="graphics/icons/delete.png" alt="faux exit button">
+                            <img src="graphics/icons/windows-couple.png" alt="faux multi-window view button">
+                            <img src="graphics/icons/minus-sign-of-a-line-in-horizontal-position.png" alt="faux minimize button">
+                        </div>
+                        <p>Outside of academics, I've very family and friends-oriented and love to hangout with my family and friends! Some hobbies I enjoy are going to the gym, drawing, crocheting, and reading.
+                        If it's not obvious yet, I'm every much a home-body and enjoy the indoors, but I do love to hike and enjoy nature trails from time to time.</p>
+                    </aside>
+                    <img src="../graphics/beachfre.jpg" alt="Friends in the beach" id="img3">
+                    <img src="../graphics/frie.jpg" alt="Friends rotting under the Sun on campus" id="img4">
+                    <aside class="textbox">
+                        <div class="topbar">
+                            <img src="graphics/icons/delete.png" alt="faux exit button">
+                            <img src="graphics/icons/windows-couple.png" alt="faux multi-window view button">
+                            <img src="graphics/icons/minus-sign-of-a-line-in-horizontal-position.png" alt="faux minimize button">
+                        </div>
+                        <p>Other very, very random facts about me that you'll probably not wonder about is that I'm an INFP, a Sagittarius (December baby), I like to cosplay, and my favorite holiday is Christmas because of the jolly feeling in the air.
+                        Yes, I'm already listening to Christmas music right now.</p>
+                    </aside>
+                    
+                </section>
+            </section>
+            <section id="works" class="tabsection">
+                <h1 class="textstroke-bluegreen">Works</h1>
+                <h2>The following showcases some of my <span class="textstroke-yellow">works</span>...</h2>
+                <section id="workscss">
+                    <article>
+                        <img src="graphics/works/engl155_picex.png" alt="Image preview of ENGL155 project: 'Speak on my Behalf'">
+                        <aside>
+                            <h3>ENGL 155: Visual & Graphic Narrative</h3>
+                            <p>Want to view the entire project? Click the button below!</p>
+                            <a href="graphics/works/engl155_speakonmybehalf.pdf" class="button">View</a>
+                        </aside>
+                    </article>
+                    <article>
+                        <img src="graphics/works/chin545_picex.png" alt="Image preview of CHIN545 research analysis of book 'Ball Lightining' by Liu Cixin">
+                        <aside>
+                            <h3>CHIN 545: Chinese Science Fiction</h3>
+                            <p>Want to view the entire project? Click the button below!</p>
+                            <a href="graphics/works/chin545_balllightninganalysis.pdf" class="button">View</a>
+                        </aside>
+                    </article>
+                    <article>
+                        <img src="graphics/works/comm638_picex.png" alt="Image preview of COMM638 game project">
+                        <aside>
+                            <h3>COMM 638: Game Design</h3>
+                            <p>Want to view the entire project? Click the button below!</p>
+                            <a href="https://drive.google.com/file/d/1Vom_bT_OMj0kyOB71PS4pvd1-JSoVYwP/view?usp=sharing" class="button">View</a>
+                        </aside>
+                    </article>
+                    <article>
+                        <img src="graphics/works/inls384_digitaldivideposter.png" alt="Image preview of INLS384 research about Digital Divide for 2024 Symposium on Information for Social Good & Scholars Showcase">
+                        <aside>
+                            <h3>INLS 384: Information and Computer Ethics</h3>
+                            <p>Want to view the entire project? Click the button below!</p>
+                            <a href="graphics/works/inls384_digitaldivideposter.png" class="button">View</a>
+                        </aside>
+                    </article>
+                    <article>
+                        <img src="graphics/works/inls382_picex.png" alt="Image preview of INLS382 prototype remodeling of an existing webpage into a mobile application in Figma">
+                        <aside>
+                            <h3>INLS 382: Information Systems Analysis and Design</h3>
+                            <p>Want to view the entire project? Click the button below!</p>
+                            <a href="https://drive.google.com/file/d/1sjQ-NjkvvwmHY0OcX_nOdVfZdO9LxGRn/view?usp=sharing" class="button">View</a>
+                        </aside>
+                    </article>
+                    <article>
+                        <img src="graphics/works/comm490_picex.png" alt="Image preview of COMM490 animation project">
+                        <aside>
+                            <h3>COMM 490: Introduction to Animation: 2D to 3D</h3>
+                            <p>Want to view the entire project? Click the button below!</p>
+                            <a href="https://drive.google.com/file/d/1NA9btX_Nfal5TmPSj6wlMZu3pL3MDJEG/view?usp=sharing" class="button">View</a>
+                        </aside>
+                    </article>
+                </section>
+            </section>
+            <section id="contact" class="tabsection">
+                <h1 class="textstroke-lilac">Contact</h1>
+                <section id="contactcss">
+                    <h2>Interested in <span class="textstroke-yellow">connecting</span> with me?</h2>
+                    <p>Click any button below to be redirected to a way to connect with me!</p>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/mdakiwas" class="button">LinkedIn</a></li>
+                        <li><a href="https://unc.joinhandshake.com/profiles/31620094" class="button">Handshake</a></li>
+                        <li><a href="https://mail.google.com/mail/u/?authuser=mjessdakiwas@gmail.com" class="button">Email</a></li>
+                    </ul>
+                    <p>Want an alternative way to connect? Fill out this form!</p>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdvM-T9Xk2CI3l6oS_bmYFy6yCbe8qtOwkMzqD7N5k5awN56A/viewform?embedded=true" 
+                            width="800" height="1000"></iframe>
+                </section>
+            </section>
+        </main>
     </body>
 </html>
