@@ -86,4 +86,21 @@ header aside {
     display: grid;
     grid-auto-flow: column;
     grid-template-rows: 1fr 1fr;
+    column-gap: 2em;
+}
+
+#from-dest {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+#from-dest-label {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+#to-dest {
+    grid-area: 2 / 2 / 2 / 3;
+}
+
+#to-dest-label {
+    grid-area: 2 / 2 / 3 / 3;
 }
