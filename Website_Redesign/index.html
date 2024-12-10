@@ -87,8 +87,8 @@
                             <div id="from-destination" class="dest-click">
                                 <i class="dest-icon fa fa-search" aria-hidden="true"></i>
                                 <label for="from-input" class="dest-label">From</label>
-                                <input type="text" class="dest-input" name="from-input"
-                                    placeholder="From where?" autocomplete="off">
+                                <input type="text" class="dest-input" name="from-input" placeholder="From where?"
+                                    autocomplete="off">
                             </div>
 
                             <div id="to-destination" class="dest-click">
@@ -121,8 +121,13 @@
                             </div>
                         </div>
 
-                        <input type="date" name="datefilter" value="" id="depart-return" placeholder="mm/dd/yyyy"
-                            autocomplete="off">
+                        <!-- Visible text input for display -->
+                        <input type="text" name="datefilter" placeholder="Depart--Return">
+
+                        <!-- Hidden inputs for individual dates -->
+                        <input type="date" name="startDate" hidden>
+                        <input type="date" name="endDate" hidden>
+
 
                         <input type="submit" value="Search" id="search">
                     </form>
@@ -145,36 +150,38 @@
                 <form id="search-form" action="results.html" method="GET">
                     <label for="from-input">Departure Airport</label>
                     <input type="text" id="from-input" name="from" placeholder="Enter departure airport" required>
-        
+
                     <label for="to-input">Destination Airport</label>
                     <input type="text" id="to-input" name="to" placeholder="Enter destination airport" required>
-        
+
                     <label for="depart-date">Departure Date</label>
                     <input type="date" id="depart-date" name="date" required>
-        
+
                     <input type="submit" value="Search">
                 </form>
             </section>
         </div>
 
-        <div id="results"></div>
+        <div id="results" class="flight-results"></div>
 
         <section id="main-content">
             <div class="hero-image">
                 <img src="graphics/pexels-didsss-2510370.jpg" alt="MidAir Airlines Plane" class="hero-img">
             </div>
-        
+
             <div class="content-text">
                 <h1>Welcome to MidAir Airlines</h1>
-                <p>Take off with a lighter touch on the earth! We are committed to providing a comfortable and eco-friendly flight experience.</p>
+                <p>Take off with a lighter touch on the earth! We are committed to providing a comfortable and
+                    eco-friendly flight experience.</p>
             </div>
-        
+
             <h2>Our Commitment</h2>
             <div class="features">
                 <div class="feature-item">
                     <img src="graphics/pexels-freestockpro-1004584.jpg" alt="Eco-Friendly" class="feature-icon">
                     <h3>Eco-Friendly Flights</h3>
-                    <p>We use sustainable practices and reduce carbon emissions, ensuring every journey is as green as possible.</p>
+                    <p>We use sustainable practices and reduce carbon emissions, ensuring every journey is as green as
+                        possible.</p>
                 </div>
                 <div class="feature-item">
                     <img src="graphics/pexels-cottonbro-6700148.jpg" alt="Comfy Seats" class="feature-icon">
@@ -184,16 +191,17 @@
                 <div class="feature-item">
                     <img src="graphics/pexels-chevanon-333525.jpg" alt="In-Flight Entertainment" class="feature-icon">
                     <h3>In-Flight Entertainment</h3>
-                    <p>Enjoy a wide range of entertainment options, including movies, music, and games, to make your flight enjoyable.</p>
+                    <p>Enjoy a wide range of entertainment options, including movies, music, and games, to make your
+                        flight enjoyable.</p>
                 </div>
             </div>
-        
+
             <div class="cta">
                 <h2>Book Your Flight Today!</h2>
                 <p>Don't wait! Choose MidAir Airlines for a memorable, sustainable travel experience.</p>
                 <a href="#book" class="cta-button">Book Now</a>
             </div>
-        </section>   
+        </section>
 
         <footer>
             <div class="social-media">

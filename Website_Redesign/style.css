@@ -135,6 +135,7 @@ header aside {
 #flight-search {
     background-color: var(--mint-dark);
     padding: 1.5em;
+    height: auto;
 }
 
 #flight-search form {
@@ -157,6 +158,14 @@ select {
 #flight-type,
 #passenger {
     align-self: center;
+}
+
+#flight-search input[type="text"] {
+    padding-left: 10px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    grid-area: 3 / 1 / 4 / 3;
 }
 
 #destination-input {
@@ -279,7 +288,7 @@ select {
 
 #check-in,
 #flight-status {
-    background-color: var(--mint-light-2);
+    background-color: var(--mint-dark);
     padding: 1.5em;
     display: flex;
     flex-direction: column;
@@ -341,21 +350,19 @@ select {
 
 #search-form label {
     font-size: 16px;
-    color: var(--carafe);
     margin-bottom: 5px;
 }
 
 #search-form {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     gap: 10px;
     padding: 1em;
-    background-color: var(--mint-dark);
     border-radius: 10px;
     box-sizing: border-box;
 }
 
-#search-form input[type="text"], 
+#search-form input[type="text"],
 #search-form input[type="date"] {
     position: relative;
     padding-left: 10px;
@@ -371,7 +378,7 @@ select {
 }
 
 #search-form input[type="submit"] {
-    position: relative; 
+    position: relative;
     padding: 15px 20px;
     font-size: 18px;
     background-color: var(--carafe);
@@ -546,12 +553,11 @@ footer {
 }
 
 .social-media a:hover {
-    color: #6ab8ee; 
+    color: #6ab8ee;
 }
 
 footer p {
     font-size: 1rem;
-    color: #ddd;
     margin-top: 10px;
 }
 

@@ -291,17 +291,19 @@ $(function () {
     $('input[name="datefilter"]').daterangepicker({
         autoUpdateInput: false,
         locale: {
-            cancelLabel: 'Clear'
+            cancelLabel: 'Clear',
+            format: 'YYYY-MM-DD', // Ensure the locale uses the correct format
         }
     });
 
     $('input[name="datefilter"]').on('apply.daterangepicker', function (ev, picker) {
-        $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
-    });
-
-    $('input[name="datefilter"]').on('cancel.daterangepicker', function (ev, picker) {
-        $(this).val('Depart--Return');
-    });
+        // Update visible input
+        $(this).val(picker.startDate.format('YYYY-MM-DD') + ' - ' + picker.endDate.format('YYYY-MM-DD'));
+        
+        // Update hidden inputs
+        $('input[name="startDate"]').val(picker.startDate.format('YYYY-MM-DD'));
+        $('input[name="endDate"]').val(picker.endDate.format('YYYY-MM-DD'));
+    });    
 });
 
 // Script for opening/closing the globe modal
@@ -370,101 +372,70 @@ window.updateMarkerInfo = updateMarkerInfo;
 
 /////////////////////////// GOOGLE FLIGHT API /////////////////////////// 
 document.getElementById('flight-form').addEventListener('submit', function (event) {
-    event.preventDefault();  // Prevent the form from refreshing the page
+    event.preventDefault(); // Prevent the form from refreshing the page
 
-    // Capture values from the form
+    // Extract values from the form
     const flightType = document.getElementById('flight-type').value;
     const passengers = document.getElementById('passenger').value;
-    const from = document.querySelector('[name="from-input"]').value.trim(); // Use name attribute
-    const to = document.querySelector('[name="to-input"]').value.trim(); // Use name attribute
-    const date = document.getElementById('depart-return').value.trim();
+    const from = document.querySelector('[name="from-input"]').value.trim();
+    const to = document.querySelector('[name="to-input"]').value.trim();
+    const dateFilter = document.querySelector('[name="datefilter"]').value.trim();
 
-    // Ensure the 'from' and 'to' fields are not empty
-    if (!from || !to || !date) {
+    // Validate inputs
+    if (!from || !to || !dateFilter) {
         alert('Please fill in all the required fields.');
         return;
     }
 
-    // Debugging: Log the values to ensure they are captured correctly
-    console.log('From:', from);
-    console.log('To:', to);
-    console.log('Date:', date);
+    // Log for debugging
     console.log('Flight Type:', flightType);
     console.log('Passengers:', passengers);
+    console.log('From:', from);
+    console.log('To:', to);
+    console.log('Date Filter:', dateFilter);
 
-    // API URL with the user input values
+    // Placeholder API URL
     const apiKey = '0df5e75a6448fef0246c8fbc10b12173f09fd02ab9f678479e7997b5e2471634';
-    const url = `https://serpapi.com/search.json?engine=google_flights&origin=${from}&destination=${to}&departure_date=${date}&passengers=${passengers}&flight_type=${flightType}&api_key=${apiKey}`;
-    const { getJson } = require("serpapi");
-    
+    const apiUrl = `https://serpapi.com/search.json?engine=google_flights&origin=${from}&destination=${to}&departure_date=${dateFilter}&passengers=${passengers}&flight_type=${flightType}&api_key=${apiKey}`;
+
     // Fetch flight data
-    fetch(url)
+    fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
-            console.log(data);
+            displayResults(data);
         })
-        .catch(error => console.error('Error fetching flight data:', error));
+        .catch(error => {
+            console.error('Error fetching flight data:', error);
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '<p>Error fetching flight data. Please try again later.</p>';
+        });
 });
 
 // Function to display the flight results
 function displayResults(data) {
-    const resultsContainer = document.getElementById('results');
-    resultsContainer.innerHTML = '';  // Clear any previous results
+    const resultsDiv = document.getElementById('results');
+    resultsDiv.innerHTML = ''; // Clear previous results
 
     // Check if there are flights in the response
-    if (data && data.flights) {
+    if (data && data.flights && data.flights.length > 0) {
         data.flights.forEach(flight => {
-            const flightResult = document.createElement('div');
-            flightResult.classList.add('flight-result');
-            flightResult.innerHTML = `
+            const flightElement = document.createElement('div');
+            flightElement.classList.add('flight-result');
+
+            // Populate the flight details
+            flightElement.innerHTML = `
                 <h3>Flight Price: ${flight.price.amount} ${flight.price.currency}</h3>
-                <p>From: ${flight.origin}</p>
-                <p>To: ${flight.destination}</p>
-                <p>Departure: ${flight.departure_time}</p>
-                <p>Arrival: ${flight.arrival_time}</p>
-                <p>Airline: ${flight.airline}</p>
+                <p><strong>From:</strong> ${flight.origin}</p>
+                <p><strong>To:</strong> ${flight.destination}</p>
+                <p><strong>Departure:</strong> ${flight.departure_time}</p>
+                <p><strong>Arrival:</strong> ${flight.arrival_time}</p>
+                <p><strong>Airline:</strong> ${flight.airline}</p>
             `;
-            resultsContainer.appendChild(flightResult);
+
+            // Append the flight result to the results div
+            resultsDiv.appendChild(flightElement);
         });
     } else {
-        resultsContainer.innerHTML = '<p>No flights found.</p>';
+        resultsDiv.innerHTML = '<p>No flights found for the selected criteria.</p>';
     }
 }
-
-
-/* For flight status
-const urlParams = new URLSearchParams(window.location.search);
-        const origin = urlParams.get('from');
-        const destination = urlParams.get('to');
-        const date = urlParams.get('date');
-
-        fetch(url)
-            .then(response => response.json())
-            .then(data => {
-                console.log(data); 
-                displayResults(data);
-            })
-            .catch(error => console.error('Error fetching flight data:', error));
-
-        function displayResults(data) {
-            const resultsContainer = document.getElementById('results');
-            resultsContainer.innerHTML = ''; // Clear previous results
-
-            if (data && data.flights) {
-                data.flights.forEach(flight => {
-                    const flightResult = document.createElement('div');
-                    flightResult.classList.add('flight-result');
-                    flightResult.innerHTML = `
-                        <h3>Flight Price: ${flight.price.amount} ${flight.price.currency}</h3>
-                        <p>From: ${flight.origin}</p>
-                        <p>To: ${flight.destination}</p>
-                        <p>Departure: ${flight.departure_time}</p>
-                        <p>Arrival: ${flight.arrival_time}</p>
-                        <p>Airline: ${flight.airline}</p>
-                    `;
-                    resultsContainer.appendChild(flightResult);
-                });
-            } else {
-                resultsContainer.innerHTML = '<p>No flights found.</p>';
-            }
-        }*/
