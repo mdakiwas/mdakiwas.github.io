@@ -1,64 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" dir="ltr">
-        <meta name="description" content="Redesign">
-        <meta name="keywords" content="HTML, CSS, JS">
-        <meta name="author" content="Marlette Dakiwas">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
-        <title>MidAir Airline</title>
-    </head>
 
-    <body>
-        <main>
-            <header>
-                <h1 class="logo"><a href="index.html">MidAir Airlines</a></h1>
-                <nav>
-                    <ul>
-                        <li><a href="#book"  class="nav-head">Book</a></li>
-                        <li><a href="#plan" class="nav-head">Plan Your Travel</a></li>
-                        <li><a href="#info" class="nav-head">Travel Info</a></li>
-                        <li><a href="#benefit" class="nav-head">MidAir Benefit®</a></li> <!--Change-->
-                    </ul>
-                    <aside id="user">
-                        <a>Sign-up</a>
-                        <a>Log-in</a>
-                    </aside>
-                </nav>
-            </header>
+<head>
+    <meta charset="UTF-8" dir="ltr">
+    <meta name="description" content="Redesign">
+    <meta name="keywords" content="HTML, CSS, JS">
+    <meta name="author" content="Marlette Dakiwas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>MidAir Airline</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+</head>
 
-            <section>
-                <section class="nav-sec" id="book">
-                    <p>testing book</p>
-                </section>
-                <section class="nav-sec" id="plan">
-                    <p>testing plan</p>
-                </section>
-                <section class="nav-sec" id="info">
-                    <p>testing info</p>
-                </section>
-                <section class="nav-sec" id="benefit">
-                    <p>testing benefit</p>
-                </section>
+<body>
+    <main>
+        <header>
+            <h1 class="logo"><a href="index.html">MidAir Airlines</a></h1>
+            <nav>
+                <div id="mobile-nav">
+                    <i class="icon fa fa-bars" aria-hidden="true"></i>
+                    <i class="icon fa fa-user" aria-hidden="true"></i>
+                </div>
+                <ul>
+                    <li><a href="#book-travel" class="nav-head">Book</a></li>
+                    <li><a href="#plan-travel" class="nav-head">Plan Your Travel</a></li>
+                    <li><a href="#info" class="nav-head">Travel Info</a></li>
+                    <li><a href="#benefit" class="nav-head">MidAir Benefit®</a></li> <!--Change-->
+                </ul>
+                <aside class="user">
+                    <a id="signup-a">Sign-up</a>
+                    <a id="login-a">Log-in</a>
+                </aside>
+            </nav>
+        </header>
+
+        <div id="nav-dropdown">
+            <section class="nav-sec" id="book-travel">
+                <p>testing book</p>
+            </section>
+            <section class="nav-sec" id="plan-travel">
+                <p>testing plan</p>
+            </section>
+            <section class="nav-sec" id="info">
+                <p>testing info</p>
+            </section>
+            <section class="nav-sec" id="benefit">
+                <p>testing benefit</p>
+            </section>
+        </div>
+
+        <div id="flights">
+            <nav id="flights-nav">
+                <ul>
+                    <li><a href="#" data-section="book">Book</a></li>
+                    <li><a href="#" data-section="check-in">Check-in</a></li>
+                    <li><a href="#" data-section="flight-status">Flight Status</a></li>
+                </ul>
+            </nav>
+
+            <section id="book" class="flights-sec">
+                <div id="flight-search">
+                    <form id="flight-form">
+                        <select name="flight-type" id="flight-type">
+                            <option value="one">One Way</option>
+                            <option value="round">Round Trip</option>
+                            <option value="multi">Multi-city</option>
+                        </select>
+
+                        <select name="passenger" id="passenger">
+                            <option value="1">1 Passenger</option>
+                            <option value="2">2 Passengers</option>
+                            <option value="3">3 Passengers</option>
+                            <option value="4">4 Passengers</option>
+                            <option value="5">5 Passengers</option>
+                            <option value="6">6 Passengers</option>
+                            <option value="7">7 Passengers</option>
+                            <option value="8">8 Passengers</option>
+                            <option value="9">9 Passengers</option>
+                        </select>
+
+                        <div id="destination-input">
+                            <div id="from-destination" class="dest-click">
+                                <i class="dest-icon fa fa-search" aria-hidden="true"></i>
+                                <label for="from-input" class="dest-label">From</label>
+                                <input type="text" class="dest-input" name="from-input"
+                                    placeholder="From where?" autocomplete="off">
+                            </div>
+
+                            <div id="to-destination" class="dest-click">
+                                <i class="dest-icon fa fa-search" aria-hidden="true"></i>
+                                <label for="to-input" class="dest-label">To</label>
+                                <input type="text" class="dest-input" name="to-input" placeholder="To where?"
+                                    autocomplete="off">
+                            </div>
+
+                            <div class="popup-content">
+                                <button id="close-popup">X</button>
+                                <h2>This is the placeholder content for input.</h2>
+
+                                <div class="locationsearch">
+                                    <button id="open-globe"><i class="fa fa-globe" aria-hidden="true"></i></button>
+                                    <label for="locsearch-input" class="locsearch-label"></label>
+                                    <input type="search" class="loc-search" name="locsearch-input"
+                                        placeholder="Placeholder" autocomplete="off">
+                                </div>
+                                <p>Unsure of where to go? Click the globe!</p>
+                                <h3>The World's Airports</h3>
+                                <ul id="search-results"></ul>
+                                <button id="prev">Previous</button>
+                                <button id="next">Next</button>
+
+                                <div class="modal" id="globe-modal">
+                                    <button class="modal-close-button" id="close-modal">&times;</button>
+                                    <div class="modal-content" id="globe-container"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <input type="text" name="datefilter" value="" id="depart-return" placeholder="mm/dd/yyyy"
+                            autocomplete="off">
+
+                        <input type="submit" value="Search" id="search">
+                    </form>
+                </div>
             </section>
 
-            <section id="flight-search">
-                <form>
-                    <label for="from-dest" id="from-dest-label">From:</label>
-                    <input type="text" id="from-dest" name="from-dest"><br><br>
-                    <label for="to-dest" id="to-dest-label">To:</label>
-                    <input type="text" id="to-dest" name="from-dest"><br><br>
+            <section id="check-in" class="flights-sec">
+                <h3>Find your trip</h3>
+                <select name="flightfind-type" id="flightfind-type">
+                    <option value="confirmation">Confirmation Number</option>
+                    <option value="credit">Credit Card Number</option>
+                    <option value="ticket">Ticket Number</option>
+                </select>
 
-                    <label for="depart" id="depart-label">Depart:</label>
-                    <input type="text" id="depart" name="depart"><br><br>
-                    <label for="return" id="return-label">Return:</label>
-                    <input type="text" id="return" name="return"><br><br>
+                <div id="dynamic-input"></div>
+            </section>
 
-                    <input type="Submit" value="Search">
+            <section id="flight-status" class="flights-sec">
+                <h3>Flight Status</h3>
+                <form id="search-form" action="results.html" method="GET">
+                    <label for="from-input">Departure Airport</label>
+                    <input type="text" id="from-input" name="from" placeholder="Enter departure airport" required>
+        
+                    <label for="to-input">Destination Airport</label>
+                    <input type="text" id="to-input" name="to" placeholder="Enter destination airport" required>
+        
+                    <label for="depart-date">Departure Date</label>
+                    <input type="date" id="depart-date" name="date" required>
+        
+                    <input type="submit" value="Search">
                 </form>
             </section>
-        </main>
-    </body>
+        </div>
+
+        <div id="results"></div>
+
+        <section id="main-content">
+            <div class="hero-image">
+                <img src="graphics/pexels-didsss-2510370.jpg" alt="MidAir Airlines Plane" class="hero-img">
+            </div>
+        
+            <div class="content-text">
+                <h1>Welcome to MidAir Airlines</h1>
+                <p>Take off with a lighter touch on the earth! We are committed to providing a comfortable and eco-friendly flight experience.</p>
+            </div>
+        
+            <div class="features">
+                <h2>Our Commitment</h2>
+                <div class="feature-item">
+                    <img src="graphics/pexels-freestockpro-1004584.jpg" alt="Eco-Friendly" class="feature-icon">
+                    <h3>Eco-Friendly Flights</h3>
+                    <p>We use sustainable practices and reduce carbon emissions, ensuring every journey is as green as possible.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="graphics/pexels-cottonbro-6700148.jpg" alt="Comfy Seats" class="feature-icon">
+                    <h3>Comfortable Seating</h3>
+                    <p>Relax in our spacious, ergonomic seats designed to make your journey more comfortable.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="graphics/pexels-chevanon-333525.jpg" alt="In-Flight Entertainment" class="feature-icon">
+                    <h3>In-Flight Entertainment</h3>
+                    <p>Enjoy a wide range of entertainment options, including movies, music, and games, to make your flight enjoyable.</p>
+                </div>
+            </div>
+        
+            <div class="cta">
+                <h2>Book Your Flight Today!</h2>
+                <p>Don't wait! Choose MidAir Airlines for a memorable, sustainable travel experience.</p>
+                <a href="#book" class="cta-button">Book Now</a>
+            </div>
+        </section>   
+
+        <footer>
+            <div class="social-media">
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+            </div>
+            <p>&copy; 2022 MidAir Airlines. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <script src="globe/globe.js" type="module"></script>
+    <script src="script.js" type="module"></script>
+</body>
+
 </html>
