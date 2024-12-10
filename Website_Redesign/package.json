@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "serpapi": "^2.1.0",
     "three": "^0.171.0"
   },
   "devDependencies": {

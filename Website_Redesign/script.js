@@ -401,8 +401,7 @@ document.getElementById('flight-form').addEventListener('submit', function (even
     fetch(url)
         .then(response => response.json())
         .then(data => {
-            console.log('Flight Data:', data); // Check the fetched data
-            displayResults(data); // Display the flight results
+            console.log(data);
         })
         .catch(error => console.error('Error fetching flight data:', error));
 });

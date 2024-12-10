@@ -1,7 +1,6 @@
 /* Color Palette */
 :root {
     --gold: #fede00;
-    --mint-light: #b4f8c8;
     --mint-dark: #aad6a0;
     --turquoise: #6ab8ee;
     --baby-blue: #a8d9f8;
@@ -76,7 +75,7 @@ header aside {
 
 .nav-sec {
     display: none;
-    background-color: var(--mint-light);
+    background-color: var(--turquoise);
     padding: 1em;
 }
 
@@ -85,7 +84,7 @@ header aside {
 }
 
 .nav-sec.active {
-    display: block;
+    display: flex;
 }
 
 #flights-nav ul {
@@ -129,21 +128,22 @@ header aside {
 }
 
 .flights-sec.active {
-    display: block;
+    display: flex;
     padding: 20px;
 }
 
 #flight-search {
-    background-color: var(--mint-light);
+    background-color: var(--mint-dark);
     padding: 1.5em;
 }
 
 #flight-search form {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    flex-direction: column;
+    flex-wrap: wrap;
     row-gap: 1em;
     column-gap: 1em;
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
@@ -164,7 +164,6 @@ select {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
     justify-content: space-between;
     row-gap: .5em;
 }
@@ -280,18 +279,20 @@ select {
 
 #check-in,
 #flight-status {
-    background-color: var(--mint-light);
+    background-color: var(--mint-light-2);
     padding: 1.5em;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 1em;
-    column-gap: 1em;
+    display: flex;
+    flex-direction: column;
 }
 
 #check-in h3,
 #flight-status h3 {
     margin-top: 10px;
     margin-bottom: 5px;
+}
+
+#check-in label {
+    display: block;
 }
 
 #flightfind-type {
@@ -318,8 +319,7 @@ select {
     box-sizing: border-box;
 }
 
-#depart-return,
-#search {
+#depart-return {
     grid-area: 3 / 1 / 4 / 3;
     align-self: center;
     height: 40px;
@@ -331,6 +331,12 @@ select {
 #search {
     background-color: var(--carafe);
     color: white;
+    grid-area: 4 / 1 / 5 / 3;
+    align-self: center;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding-left: 15px;
 }
 
 #search-form label {
@@ -344,13 +350,13 @@ select {
     flex-direction: column; 
     gap: 10px;
     padding: 1em;
-    background-color: var(--mint-light-2);
+    background-color: var(--mint-dark);
     border-radius: 10px;
     box-sizing: border-box;
 }
 
 #search-form input[type="text"], 
-#search-form #depart-return {
+#search-form input[type="date"] {
     position: relative;
     padding-left: 10px;
     padding-right: 10px;
@@ -436,6 +442,7 @@ canvas {
 
 #main-content {
     padding: 20px;
+    text-align: center;
 }
 
 .hero-image {
@@ -458,7 +465,7 @@ canvas {
 .content-text h1 {
     font-size: 2.5rem;
     font-weight: bold;
-    color: var(--mint-light-2);
+    color: var(--mint-dark);
 }
 
 .content-text p {
@@ -484,7 +491,7 @@ canvas {
 
 .feature-item h3 {
     font-size: 1.25rem;
-    color: var(--mint-light-2);
+    color: var(--mint-dark);
 }
 
 .feature-item p {
@@ -494,7 +501,7 @@ canvas {
 
 .cta {
     text-align: center;
-    background-color: var(--mint-light-2);
+    background-color: var(--turquoise);
     color: #fff;
     padding: 20px;
 }
@@ -506,7 +513,7 @@ canvas {
 
 .cta p {
     font-size: 1.125rem;
-    margin-bottom: 20px;
+    margin-bottom: 45px;
 }
 
 .cta-button {
@@ -521,7 +528,7 @@ canvas {
 
 footer {
     background-color: var(--mint-light-2);
-    color: #fff;
+    color: black;
     text-align: center;
     padding: 20px 10px;
     font-size: 1rem;
@@ -532,7 +539,7 @@ footer {
 }
 
 .social-media a {
-    color: #fff;
+    color: black;
     font-size: 1.5rem;
     margin: 0 10px;
     transition: color 0.3s ease;
